@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spare Human Services | Dog Walking & Pet Sitting in Largo, FL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; background: #f9f9fb; color: #2d2d2d; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 60px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 6px 18px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; color: #a8edea; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 10px; }
+    .hero h1 span { background: linear-gradient(90deg, #a8edea, #fed6e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 1.1rem; opacity: 0.85; margin-bottom: 16px; font-weight: 600; }
+    .hero-location { font-size: 0.95rem; opacity: 0.65; margin-bottom: 32px; }
+    .cta-button { display: inline-block; background: linear-gradient(135deg, #a8edea, #fed6e3); color: #1a1a2e; font-weight: 900; font-size: 1.1rem; padding: 16px 40px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 30px rgba(168,237,234,0.3); }
+    .hero-trust { margin-top: 28px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 0.85rem; opacity: 0.75; }
+    .intro { background: white; padding: 50px 20px; text-align: center; max-width: 700px; margin: 0 auto; }
+    .intro h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 14px; color: #1a1a2e; }
+    .intro p { font-size: 1.05rem; line-height: 1.7; color: #555; }
+    .services { padding: 50px 20px; background: #f9f9fb; }
+    .section-title { text-align: center; font-size: 1.8rem; font-weight: 900; color: #1a1a2e; margin-bottom: 8px; }
+    .section-sub { text-align: center; color: #888; margin-bottom: 36px; font-size: 0.95rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .service-card { background: white; border-radius: 20px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.15rem; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+    .service-card p { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 14px; }
+    .price-tag { display: inline-block; border: 1px solid #a8edea; color: #0f3460; font-weight: 800; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; }
+    .why { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; padding: 50px 20px; text-align: center; }
+    .why .section-title { color: white; }
+    .why .section-sub { color: rgba(255,255,255,0.6); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .why-item { padding: 20px; }
+    .why-item .icon { font-size: 2rem; margin-bottom: 10px; }
+    .why-item h4 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; color: #a8edea; }
+    .why-item p { font-size: 0.875rem; opacity: 0.75; line-height: 1.5; }
+    .reviews { padding: 50px 20px; background: #f9f9fb; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+    .review-card { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .stars { font-size: 1.2rem; margin-bottom: 12px; }
+    .review-card p { font-size: 0.95rem; color: #555; line-height: 1.6; font-style: italic; margin-bottom: 14px; }
+    .reviewer { font-weight: 800; font-size: 0.9rem; color: #1a1a2e; }
+    .review-source { font-size: 0.8rem; color: #aaa; }
+    .contact { background: white; padding: 60px 20px; text-align: center; }
+    .contact h2 { font-size: 1.8rem; font-weight: 900; color: #1a1a2e; margin-bottom: 10px; }
+    .contact p { color: #666; margin-bottom: 32px; font-size: 1rem; }
+    .contact-buttons { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .contact-btn { display: flex; align-items: center; gap: 10px; padding: 16px 36px; border-radius: 50px; font-size: 1.05rem; font-weight: 800; text-decoration: none; min-width: 260px; justify-content: center; }
+    .btn-call { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; }
+    .btn-text { background: linear-gradient(135deg, #a8edea, #fed6e3); color: #1a1a2e; }
+    .service-area { margin-top: 32px; font-size: 0.9rem; color: #aaa; }
+    footer { background: #1a1a2e; color: rgba(255,255,255,0.5); text-align: center; padding: 24px 20px; font-size: 0.85rem; }
+    footer strong { color: rgba(255,255,255,0.8); }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-badge">🐾 Largo, Florida's Trusted Pet Care</div>
+    <h1>Your Pet Deserves a<br/><span>Spare Human</span></h1>
+    <p class="hero-sub">Professional Dog Walking & Pet Sitting — Rain or Shine</p>
+    <p class="hero-location">📍 Largo · Clearwater · Pinellas County</p>
+    <a href="tel:7273866349" class="cta-button">📞 Call or Text to Book</a>
+    <div class="hero-trust">
+      <span>✅ Licensed & Insured</span>
+      <span>📍 GPS Tracked</span>
+      <span>📸 Photo Updates</span>
+      <span>⚡ Same-Day Available</span>
+    </div>
+  </section>
+
+  <div style="background:white;">
+    <div class="intro">
+      <h2>We treat your pets like family 🐶🐱</h2>
+      <p>Hi, I'm Ryan — the human behind Spare Human Services. Local to Largo, licensed, bonded & insured, and genuinely passionate about animals. Whether you need a quick walk, a drop-in visit, or overnight care — I've got you covered.</p>
+    </div>
+  </div>
+
+  <section class="services">
+    <h2 class="section-title">Services & Pricing</h2>
+    <p class="section-sub">Flexible options for every pet and schedule</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🦮</div><h3>Dog Walking</h3><p>Solo walks with GPS tracking and a photo update every time.</p><span class="price-tag">30 min $18 · 60 min $33</span></div>
+      <div class="service-card"><div class="service-icon">🏠</div><h3>Drop-In Visits</h3><p>Quick check-ins for feeding, potty breaks, and some love.</p><span class="price-tag">15 min $16 · 30 min $24</span></div>
+      <div class="service-card"><div class="service-icon">🛋️</div><h3>In-Home Pet Sitting</h3><p>Extended care in your home — feeding, playtime, companionship.</p><span class="price-tag">From $20/hr</span></div>
+      <div class="service-card"><div class="service-icon">🌙</div><h3>Overnight Care</h3><p>We stay the night so your pet sleeps in their own home.</p><span class="price-tag">$180 flat (10pm–6am)</span></div>
+      <div class="service-card"><div class="service-icon">🎓</div><h3>Basic Obedience Training</h3><p>Sit, stay, leash manners with positive reinforcement.</p><span class="price-tag">Contact for pricing</span></div>
+      <div class="service-card"><div class="service-icon">🚨</div><h3>Emergency & Holiday Care</h3><p>Same-day availability when you need it most.</p><span class="price-tag">Contact for pricing</span></div>
+    </div>
+  </section>
+
+  <section class="why">
+    <h2 class="section-title">Why Spare Human Services?</h2>
+    <p class="section-sub">Peace of mind every single visit</p>
+    <div class="why-grid">
+      <div class="why-item"><div class="icon">🛡️</div><h4>Licensed, Bonded & Insured</h4><p>Your pet and home are fully protected.</p></div>
+      <div class="why-item"><div class="icon">📍</div><h4>GPS Tracked Walks</h4><p>Know exactly where your pup went.</p></div>
+      <div class="why-item"><div class="icon">📸</div><h4>Photo Updates</h4><p>Cute photos sent during every visit.</p></div>
+      <div class="why-item"><div class="icon">⚡</div><h4>Same-Day Availability</h4><p>Life is unpredictable. We're here.</p></div>
+      <div class="why-item"><div class="icon">🌧️</div><h4>Rain or Shine</h4><p>We show up. No weather cancellations.</p></div>
+      <div class="why-item"><div class="icon">❤️</div><h4>Locally Owned</h4><p>Your neighbor, not a corporation.</p></div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2 class="section-title">What Pet Parents Say</h2>
+    <p class="section-sub">⭐⭐⭐⭐⭐ 5 stars across the board</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"My dog actually looks forward to his services. When I come home from vacation, my dog Vader is so happy. Thank you very much Ryan."</p>
+        <div class="reviewer">David Riposo</div>
+        <div class="review-source">5-star · Google Business</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"So grateful to have found someone local I can actually trust with my pets. Highly recommend Spare Human Services!"</p>
+        <div class="reviewer">Facebook Recommendation</div>
+        <div class="review-source">5-star · Facebook</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Ready to Book? 🐾</h2>
+    <p>Call or text anytime — same-day bookings welcome.</p>
+    <div class="contact-buttons">
+      <a href="tel:7273866349" class="contact-btn btn-call">📞 Call (727) 386-6349</a>
+      <a href="sms:7273866349" class="contact-btn btn-text">💬 Text to Book</a>
+    </div>
+    <p class="service-area">📍 Serving Largo, Clearwater & Pinellas County, FL</p>
+  </section>
+
+  <footer>
+    <strong>Spare Human Services</strong> · Largo, Florida · Licensed, Bonded & Insured<br/>
+    <span style="font-size:0.8rem;">© 2026 Spare Human Services. All rights reserved.</span>
+  </footer>
+</body>
+</html>
