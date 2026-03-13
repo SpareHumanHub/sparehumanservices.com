@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Door Hanger – Spare Human Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:#ddd;display:flex;justify-content:center;gap:32px;padding:32px 16px;flex-wrap:wrap}
+.label{text-align:center;font-size:11px;font-weight:800;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.hanger{width:324px;height:800px;border-radius:12px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.22);display:flex;flex-direction:column}
+.hole{width:38px;height:38px;border-radius:50%;margin:16px auto 0;flex-shrink:0}
+
+/* FRONT */
+.front{background:linear-gradient(160deg,#1a1a2e,#16213e,#0f3460);color:#fff}
+.hole-f{background:#ddd;border:3px solid rgba(255,255,255,0.2)}
+.badge{display:inline-block;background:rgba(168,237,234,0.15);border:1px solid rgba(168,237,234,0.4);border-radius:50px;padding:4px 12px;font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#a8edea;margin-bottom:8px}
+.f-top{padding:12px 22px 14px;text-align:center}
+.f-pre{font-size:12px;font-weight:700;opacity:.7;margin-bottom:3px}
+.f-title{font-size:26px;font-weight:900;line-height:1.1;margin-bottom:3px}
+.f-title span{background:linear-gradient(90deg,#a8edea,#fed6e3);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.f-loc{font-size:10px;opacity:.55}
+.divider{height:1px;background:rgba(255,255,255,0.1);margin:0 20px}
+.ruby{margin:12px 18px;background:rgba(168,237,234,0.1);border-left:3px solid #a8edea;border-radius:8px;padding:9px 12px;font-size:10.5px;line-height:1.5;color:rgba(255,255,255,0.85);font-style:italic;flex-shrink:0}
+.ruby strong{font-style:normal;color:#a8edea}
+.svc-wrap{padding:0 18px;flex-shrink:0}
+.svc-head{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#a8edea;margin-bottom:6px}
+.svc-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:10.5px}
+.svc-row:last-child{border:none}
+.svc-l{font-weight:700;color:rgba(255,255,255,0.9)}
+.svc-p{font-weight:800;color:#a8edea;font-size:10px}
+.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 18px 0;flex-shrink:0}
+.tb{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 9px;font-size:9px;font-weight:700;color:rgba(255,255,255,0.8)}
+.cta{margin:12px 18px 8px;background:linear-gradient(135deg,#a8edea,#fed6e3);border-radius:12px;padding:12px;text-align:center;flex-shrink:0}
+.cta-lbl{font-size:9px;font-weight:700;color:#1a1a2e;opacity:.65;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.cta-ph{font-size:20px;font-weight:900;color:#1a1a2e}
+.cta-sub{font-size:9px;font-weight:700;color:#1a1a2e;opacity:.55;margin-top:2px}
+.rev{margin:0 18px;flex-shrink:0}
+.rev-box{background:rgba(255,255,255,0.06);border-radius:10px;padding:9px 11px;font-size:9.5px;font-style:italic;color:rgba(255,255,255,0.75);line-height:1.5}
+.rev-by{font-style:normal;font-weight:800;color:#a8edea;margin-top:4px;font-size:9px}
+.f-foot{margin-top:auto;padding:8px 18px 12px;text-align:center;font-size:8.5px;color:rgba(255,255,255,0.3);flex-shrink:0}
+
+/* BACK */
+.back{background:#f9f9fb;color:#1a1a2e}
+.hole-b{background:#ddd;border:3px solid #ccc}
+.b-top{padding:12px 22px 8px;text-align:center;flex-shrink:0}
+.b-title{font-size:17px;font-weight:900;margin-bottom:2px}
+.b-title span{background:linear-gradient(90deg,#0f3460,#a8edea);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.b-sub{font-size:9.5px;color:#888;font-weight:600}
+.b-div{height:2px;background:linear-gradient(90deg,#a8edea,#fed6e3);margin:0 22px 12px;border-radius:2px}
+.pricing{padding:0 18px;flex-shrink:0}
+.pcat{margin-bottom:10px}
+.pcat-t{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#0f3460;margin-bottom:4px;padding-bottom:3px;border-bottom:1px solid #e4e4e4}
+.prow{display:flex;justify-content:space-between;font-size:10px;padding:2.5px 0;color:#444}
+.prow .pn{font-weight:700}
+.prow .pp{font-weight:800;color:#0f3460}
+.why-b{margin:6px 18px 0;background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:10px;padding:10px 12px;flex-shrink:0}
+.why-bt{font-size:9px;font-weight:800;color:#a8edea;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.why-bg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.why-bi{font-size:9px;color:rgba(255,255,255,0.85);font-weight:600}
+.cont-b{margin:8px 18px 0;display:flex;gap:10px;align-items:center;flex-shrink:0}
+.qr{width:64px;height:64px;border-radius:8px;background:#fff;border:2px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.qr span{font-size:7px;font-weight:700;color:#aaa;text-align:center;margin-top:2px;line-height:1.2}
+.ci .ci-ph{font-size:15px;font-weight:900;color:#1a1a2e;margin-bottom:2px}
+.ci .ci-r{font-size:9px;font-weight:600;color:#666;margin-bottom:1px}
+.b-foot{margin-top:auto;padding:6px 18px 12px;text-align:center;font-size:8px;color:#bbb;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="label">▲ Front Side</div>
+  <div class="hanger front">
+    <div class="hole hole-f"></div>
+    <div class="f-top">
+      <div class="badge">🐾 Your Neighborhood Pet Pro</div>
+      <p class="f-pre">Professional Pet Care from</p>
+      <h1 class="f-title"><span>Spare Human</span><br>Services</h1>
+      <p class="f-loc">Largo · Clearwater · Pinellas County</p>
+    </div>
+    <div class="divider"></div>
+    <div class="ruby"><strong>Hey neighbor!</strong> You may have seen me walking Ruby around the neighborhood. I'm Ryan — your local, licensed &amp; insured pet sitter and dog walker. 🐕</div>
+    <div class="svc-wrap">
+      <div class="svc-head">Services &amp; Starting Prices</div>
+      <div class="svc-row"><span class="svc-l">🦮 Dog Walking (30 min)</span><span class="svc-p">from $18</span></div>
+      <div class="svc-row"><span class="svc-l">🏠 Drop-In Visits</span><span class="svc-p">from $16</span></div>
+      <div class="svc-row"><span class="svc-l">🛋️ In-Home Pet Sitting</span><span class="svc-p">from $20/hr</span></div>
+      <div class="svc-row"><span class="svc-l">🌙 Overnight Care</span><span class="svc-p">$180 flat</span></div>
+    </div>
+    <div class="badges">
+      <span class="tb">✅ Licensed &amp; Insured</span>
+      <span class="tb">📍 GPS Tracked</span>
+      <span class="tb">📸 Photo Updates</span>
+      <span class="tb">⚡ Same-Day</span>
+    </div>
+    <div class="cta">
+      <div class="cta-lbl">Call or Text to Book</div>
+      <div class="cta-ph">📞 (727) 386-6349</div>
+      <div class="cta-sub">Same-day welcome · Rain or Shine</div>
+    </div>
+    <div class="rev">
+      <div class="rev-box">
+        ⭐⭐⭐⭐⭐ "My dog actually looks forward to his services. Vader is so happy. Thank you Ryan."
+        <div class="rev-by">— David Riposo · Google Review</div>
+      </div>
+    </div>
+    <div class="f-foot">sparehumanservices.com · Largo, FL</div>
+  </div>
+</div>
+
+<div>
+  <div class="label">▲ Back Side</div>
+  <div class="hanger back">
+    <div class="hole hole-b"></div>
+    <div class="b-top">
+      <div class="b-title"><span>Spare Human</span> Services</div>
+      <div class="b-sub">Full Pricing — Largo, Clearwater &amp; Pinellas County</div>
+    </div>
+    <div class="b-div"></div>
+    <div class="pricing">
+      <div class="pcat">
+        <div class="pcat-t">🦮 Dog Walking</div>
+        <div class="prow"><span class="pn">30 min walk (1 dog)</span><span class="pp">$18</span></div>
+        <div class="prow"><span class="pn">60 min walk (1 dog)</span><span class="pp">$33</span></div>
+        <div class="prow"><span class="pn">Additional dog</span><span class="pp">+$5</span></div>
+      </div>
+      <div class="pcat">
+        <div class="pcat-t">🏠 Drop-In Visits</div>
+        <div class="prow"><span class="pn">15 min check-in</span><span class="pp">$16</span></div>
+        <div class="prow"><span class="pn">30 min extended drop-in</span><span class="pp">$24</span></div>
+        <div class="prow"><span class="pn">Drop-in + play or walk</span><span class="pp">from $40</span></div>
+      </div>
+      <div class="pcat">
+        <div class="pcat-t">🛋️ In-Home Pet Sitting</div>
+        <div class="prow"><span class="pn">Hourly care</span><span class="pp">$20/hr</span></div>
+        <div class="prow"><span class="pn">5-hour block rate</span><span class="pp">$22/hr</span></div>
+        <div class="prow"><span class="pn">Overnight (10pm–6am)</span><span class="pp">$180 flat</span></div>
+      </div>
+      <div class="pcat">
+        <div class="pcat-t">➕ Add-Ons</div>
+        <div class="prow"><span class="pn">Holiday premium</span><span class="pp">Ask us</span></div>
+        <div class="prow"><span class="pn">Off-hours (before 8am/after 8pm)</span><span class="pp">Ask us</span></div>
+        <div class="prow"><span class="pn">Basic obedience training</span><span class="pp">Ask us</span></div>
+      </div>
+    </div>
+    <div class="why-b">
+      <div class="why-bt">Why Choose Spare Human?</div>
+      <div class="why-bg">
+        <div class="why-bi">🛡️ Licensed &amp; Insured</div>
+        <div class="why-bi">📍 GPS Tracked Walks</div>
+        <div class="why-bi">📸 Photo Every Visit</div>
+        <div class="why-bi">⚡ Same-Day Available</div>
+        <div class="why-bi">🌧️ Rain or Shine</div>
+        <div class="why-bi">❤️ Locally Owned</div>
+      </div>
+    </div>
+    <div class="cont-b">
+      <div class="qr">📱<span>Add QR in Canva</span></div>
+      <div class="ci">
+        <div class="ci-ph">📞 (727) 386-6349</div>
+        <div class="ci-r">📍 Largo, FL · Pinellas County</div>
+        <div class="ci-r">🌐 sparehumanservices.com</div>
+      </div>
+    </div>
+    <div class="b-foot">© 2026 Spare Human Services · Licensed, Bonded &amp; Insured</div>
+  </div>
+</div>
+
+</body>
+</html>
