@@ -95,7 +95,8 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "In-Home Pet Sitting", "description": "Extended care in your home from $20/hr" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Overnight Care", "description": "Overnight stays in your home, 10pm to 6am" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet Taxi", "description": "Safe transport to vet, grooming, or anywhere your pet needs to go" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dog Waste Removal", "description": "Weekly yard cleanup starting at $16/week" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dog Waste Removal", "description": "Weekly yard cleanup starting at $16/week" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Assisi Service", "description": "Temporary pet care assistance for neighbors facing illness, injury, or hardship" } }
       ]
     }
   }
@@ -517,7 +518,7 @@
     </div>
     <div class="services-grid">
 
-      <div class="service-card reveal" onclick="openModal('walking')">
+      <div class="service-card reveal" id="service-walking" onclick="openModal('walking')">
         <div class="service-icon">🦮</div>
         <h3>Dog Walking</h3>
         <p>Solo walks with GPS tracking and a photo update every time. Perfect for busy days.</p>
@@ -525,7 +526,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('dropin')">
+      <div class="service-card reveal" id="service-dropin" onclick="openModal('dropin')">
         <div class="service-icon">🏠</div>
         <h3>Drop-In Visits</h3>
         <p>Quick check-ins for feeding, potty breaks, and some love while you're away.</p>
@@ -533,7 +534,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('sitting')">
+      <div class="service-card reveal" id="service-sitting" onclick="openModal('sitting')">
         <div class="service-icon">🛋️</div>
         <h3>In-Home Pet Sitting</h3>
         <p>Extended care in your home — feeding, playtime, and companionship all day.</p>
@@ -541,7 +542,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('overnight')">
+      <div class="service-card reveal" id="service-overnight" onclick="openModal('overnight')">
         <div class="service-icon">🌙</div>
         <h3>Overnight Care</h3>
         <p>We stay the night so your pet sleeps comfortably in their own home.</p>
@@ -549,7 +550,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('taxi')">
+      <div class="service-card reveal" id="service-taxi" onclick="openModal('taxi')">
         <div class="service-icon">🚗</div>
         <h3>Pet Taxi</h3>
         <p>Safe, stress-free transport for your pet — vet visits, grooming, or wherever they need to go.</p>
@@ -557,7 +558,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('waste')">
+      <div class="service-card reveal" id="service-waste" onclick="openModal('waste')">
         <div class="service-icon">💩</div>
         <h3>Dog Waste Removal</h3>
         <p>We scoop so you don't have to. Weekly yard cleanups — just set it and forget it.</p>
@@ -569,7 +570,7 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('training')">
+      <div class="service-card reveal" id="service-training" onclick="openModal('training')">
         <div class="service-icon">🎓</div>
         <h3>Basic Obedience Training</h3>
         <p>Sit, stay, leash manners — foundational training with positive reinforcement.</p>
@@ -577,10 +578,18 @@
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
 
-      <div class="service-card reveal" onclick="openModal('emergency')">
+      <div class="service-card reveal" id="service-emergency" onclick="openModal('emergency')">
         <div class="service-icon">🚨</div>
         <h3>Emergency & Holiday Care</h3>
         <p>Same-day availability and holiday coverage when you need it most.</p>
+        <span class="price-tag">Contact for pricing</span>
+        <div class="tap-hint">👆 Tap for full details</div>
+      </div>
+
+      <div class="service-card reveal" id="service-assisi" onclick="openModal('assisi')">
+        <div class="service-icon">🤝</div>
+        <h3>Assisi Service</h3>
+        <p>Temporary pet care support for neighbors facing illness, injury, or hardship.</p>
         <span class="price-tag">Contact for pricing</span>
         <div class="tap-hint">👆 Tap for full details</div>
       </div>
@@ -737,14 +746,14 @@
 
         <article class="blog-card reveal">
           <div class="blog-meta">Dog Walking · Social Enrichment</div>
-          <h3>Why Group Walks Can Make Dogs Happier</h3>
+          <h3>Why Walks Make Dogs Happier</h3>
           <div class="blog-tags">
             <span class="blog-tag">Exercise</span>
             <span class="blog-tag">Social Enrichment</span>
             <span class="blog-tag">Local Tips</span>
           </div>
           <p>How social enrichment and exercise can support calmer, happier dogs.</p>
-          <a class="blog-link" href="/blog/why-group-walks-help.html">Read the full post</a>
+          <a class="blog-link" href="/blog/why-walks-make-dogs-happier.html">Read the full post</a>
         </article>
 
         <article class="blog-card reveal">
@@ -934,6 +943,14 @@
           { label: 'Holiday premium (all services)', price: '+$10–$20' },
         ],
         includes: ['Same-day availability', 'Holiday coverage (all major holidays)', 'All standard services available', 'Rapid response via call or text', 'No judgment, just help']
+      },
+      assisi: {
+        icon: '🤝', title: 'Assisi Service',
+        desc: 'Inspired by St. Francis of Assisi, this service offers temporary pet care support for neighbors facing illness, injury, or financial hardship. I focus on compassionate, respectful help so pets stay cared for when life gets hard.',
+        pricing: [
+          { label: 'Sliding scale / assistance', price: 'Contact me' },
+        ],
+        includes: ['Short-term support during recovery or hardship', 'Walking, feeding, or drop-in care', 'Confidential and respectful assistance', 'Priority for urgent need when available', 'Care plans built around your pet\'s routine']
       }
     };
 
