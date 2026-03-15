@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Professional dog walking, pet sitting &amp; overnight care in Largo, Clearwater &amp; Pinellas County. Licensed, insured, GPS tracked. Reactive &amp; large breeds welcome. Same-day available. Call (727) 386-6349." />
-  <meta name="keywords" content="dog walker Largo FL, pet sitter Largo FL, dog walking Clearwater FL, pet sitting Pinellas County, overnight pet care Largo, dog walking near me, pet taxi Largo FL" />
+  <meta name="description" content="Professional dog walking, pet sitting &amp; overnight care in Largo, Belleair, Clearwater &amp; Clearwater Beach. Licensed, insured, GPS tracked. Reactive &amp; large breeds welcome. Same-day available. Call (727) 386-6349." />
+  <meta name="keywords" content="dog walker Largo FL, pet sitter Largo FL, dog walking Clearwater FL, dog walking Belleair FL, pet sitting Clearwater Beach, pet sitting Pinellas County, overnight pet care Largo, dog walking near me, pet taxi Largo FL" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sparehumanservices.com/" />
 
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sparehumanservices.com/" />
   <meta property="og:title" content="Dog Walking &amp; Pet Sitting in Largo, FL | Spare Human Services" />
-  <meta property="og:description" content="Licensed &amp; insured dog walking, pet sitting, overnight care, pet taxi &amp; waste removal in Largo, FL. Same-day available. Call (727) 386-6349." />
+  <meta property="og:description" content="Licensed &amp; insured dog walking, pet sitting, overnight care, pet taxi &amp; waste removal in Largo, Belleair, Clearwater &amp; Clearwater Beach. Same-day available. Call (727) 386-6349." />
   <meta property="og:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b358bf8e7e209b630af346/32597374e_generated_image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -30,7 +30,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dog Walking &amp; Pet Sitting in Largo, FL | Spare Human Services" />
-  <meta name="twitter:description" content="Licensed &amp; insured dog walking, pet sitting, overnight care, pet taxi &amp; waste removal in Largo, FL. Same-day available." />
+  <meta name="twitter:description" content="Licensed &amp; insured dog walking, pet sitting, overnight care, pet taxi &amp; waste removal in Largo, Belleair, Clearwater &amp; Clearwater Beach. Same-day available." />
   <meta name="twitter:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b358bf8e7e209b630af346/32597374e_generated_image.png" />
 
   <!-- Local Business Schema -->
@@ -56,7 +56,9 @@
     },
     "areaServed": [
       { "@type": "City", "name": "Largo" },
+      { "@type": "City", "name": "Belleair" },
       { "@type": "City", "name": "Clearwater" },
+      { "@type": "City", "name": "Clearwater Beach" },
       { "@type": "City", "name": "Seminole" },
       { "@type": "City", "name": "Dunedin" },
       { "@type": "City", "name": "Safety Harbor" },
@@ -394,6 +396,28 @@
     }
     .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 16px; }
 
+    /* ── BLOG ── */
+    .blog-section { background: #f9f9fb; padding: 60px 20px; }
+    .blog-wrap { max-width: 980px; margin: 0 auto; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .blog-card {
+      background: white; border-radius: 20px; padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .blog-card:hover { transform: translateY(-4px); }
+    .blog-meta { font-size: 0.82rem; color: #9aa0a6; margin-bottom: 10px; font-weight: 700; }
+    .blog-card h3 { font-size: 1.15rem; font-weight: 900; color: #1a1a2e; margin-bottom: 10px; }
+    .blog-card p { color: #555; font-size: 0.94rem; line-height: 1.6; margin-bottom: 12px; }
+    .blog-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .blog-tag { font-size: 0.78rem; font-weight: 800; color: #0f3460; background: rgba(168,237,234,0.25); padding: 6px 10px; border-radius: 999px; }
+    .blog-card details { margin-top: 6px; }
+    .blog-card summary {
+      cursor: pointer; font-weight: 800; color: #0f3460; list-style: none;
+    }
+    .blog-card summary::-webkit-details-marker { display: none; }
+    .blog-card details[open] summary { margin-bottom: 10px; }
+
     /* ── SOCIAL ── */
     .social-section { background: #f9f9fb; padding: 60px 20px; text-align: center; }
     .social-section h2 { font-size: 1.9rem; font-weight: 900; color: #1a1a2e; margin-bottom: 10px; }
@@ -440,6 +464,7 @@
       <a href="#why">Why Us</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="tel:7273866349" class="nav-cta">📞 Book Now</a>
@@ -461,7 +486,7 @@
       <div class="hero-badge">🐾 Largo, Florida's Trusted Pet Care</div>
       <h1>Your Pet Deserves a<br/><span>Spare Human</span></h1>
       <p class="hero-sub">Professional Dog Walking & Pet Sitting in Largo, FL — Rain or Shine</p>
-      <p class="hero-location">📍 Largo <span>·</span> Clearwater <span>·</span> Pinellas County</p>
+      <p class="hero-location">📍 Largo <span>·</span> Belleair <span>·</span> Clearwater <span>·</span> Clearwater Beach</p>
       <a href="tel:7273866349" class="cta-button">📞 Call or Text to Book</a>
       <div class="hero-trust">
         <span>✅ Licensed & Insured</span>
@@ -644,7 +669,7 @@
         <button class="faq-question" onclick="toggleFaq(this)">
           What areas do you serve? <span class="faq-chevron">▼</span>
         </button>
-        <div class="faq-answer">I'm based in Largo and serve all of Pinellas County — including Clearwater, Seminole, Dunedin, Safety Harbor, and surrounding areas. Not sure if you're in range? Just ask.</div>
+        <div class="faq-answer">I'm based in Largo and serve Belleair, Clearwater, Clearwater Beach, and nearby Pinellas County areas like Seminole, Dunedin, and Safety Harbor. Not sure if you're in range? Just ask.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -668,6 +693,71 @@
         <div class="faq-answer">Easy — just call or text (727) 386-6349. We'll do a quick meet-and-greet so your pet gets comfortable with me before the first visit. No pressure, no commitment.</div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ── BLOG ── -->
+  <section class="blog-section" id="blog">
+    <div class="blog-wrap">
+      <h2 class="section-title reveal">Pet Care Tips for Largo & Nearby</h2>
+      <p class="section-sub reveal">Friendly, practical advice from a local pet pro</p>
+
+      <div class="blog-grid">
+        <article class="blog-card reveal">
+          <div class="blog-meta">Dog Walking · Largo, Belleair, Clearwater</div>
+          <h3>How to Choose the Right Dog Walker in Largo</h3>
+          <div class="blog-tags">
+            <span class="blog-tag">Reactive Dogs</span>
+            <span class="blog-tag">Large Breeds</span>
+            <span class="blog-tag">Safety First</span>
+          </div>
+          <p>Looking for a dog walker in Largo, Belleair, Clearwater, or Clearwater Beach? Here is a short checklist to help you find someone who is reliable, communicative, and confident with reactive or large dogs.</p>
+          <details>
+            <summary>Read the full post</summary>
+            <p>1) Ask about experience with reactive and large dogs. The right walker can explain how they manage triggers, keep distance, and use calm, positive handling.</p>
+            <p>2) Expect clear updates. A GPS track, a photo, and a short summary after every walk helps you feel confident and helps your dog stay on routine.</p>
+            <p>3) Look for a safety-first approach. Great walkers choose calmer routes, avoid crowded times, and have a plan when another dog approaches.</p>
+            <p>4) Local knowledge matters. Familiarity with Largo, Belleair, Clearwater, and Clearwater Beach means smarter routes and fewer surprises.</p>
+            <p>If you want a dog walker who is experienced with reactive dogs and large breeds, reach out and we can set up a meet-and-greet.</p>
+          </details>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-meta">Pet Sitting · In-Home Care</div>
+          <h3>Drop-In Visits vs. In-Home Pet Sitting</h3>
+          <div class="blog-tags">
+            <span class="blog-tag">Pet Parents</span>
+            <span class="blog-tag">Stress-Free Care</span>
+            <span class="blog-tag">Local Service</span>
+          </div>
+          <p>Not sure whether drop-in visits or in-home pet sitting is best? It depends on your dog’s routine and comfort level. Here is a simple way to decide.</p>
+          <details>
+            <summary>Read the full post</summary>
+            <p>Drop-in visits are best for pets who are comfortable alone for longer stretches and just need feeding, potty breaks, and a quick check-in.</p>
+            <p>In-home pet sitting works best for dogs who prefer companionship, consistent routines, or a calmer environment. This is often a great fit for reactive dogs.</p>
+            <p>For pet parents in Largo, Belleair, Clearwater, and Clearwater Beach, I help you choose the right option based on your dog’s needs, not a one-size-fits-all plan.</p>
+            <p>Want help choosing? Call or text and I will recommend the best plan for your pet.</p>
+          </details>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-meta">Special Care · Reactive Dogs</div>
+          <h3>Care for Reactive Dogs and Large Breeds</h3>
+          <div class="blog-tags">
+            <span class="blog-tag">Positive Handling</span>
+            <span class="blog-tag">Calm Routines</span>
+            <span class="blog-tag">Local Expert</span>
+          </div>
+          <p>Reactive dogs and large breeds need calm, confident handling. Here is the approach I use to keep every dog safe and comfortable.</p>
+          <details>
+            <summary>Read the full post</summary>
+            <p>I start with slow, pressure-free introductions to build trust. For reactive dogs, I use calm, consistent handling and plan routes that avoid crowded areas and known triggers.</p>
+            <p>Large dogs are strong and often sensitive. Clear communication, steady leash control, and positive reinforcement make each visit safe and low-stress.</p>
+            <p>Serving Largo, Belleair, Clearwater, and Clearwater Beach, I build care plans around your dog’s specific needs and comfort level.</p>
+            <p>If your dog needs a patient, experienced handler, reach out and we will set a plan that works.</p>
+          </details>
+        </article>
+      </div>
     </div>
   </section>
 
