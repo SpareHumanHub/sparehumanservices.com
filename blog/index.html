@@ -6,31 +6,68 @@
   <title>Spare Human Services Blog | Pet Safety & Pet Care Tips in Largo, FL</title>
   <meta name="description" content="Local pet safety and pet care tips from Spare Human Services in Largo, FL, including dog walking safety, hurricane prep, fireworks tips, and Florida backyard hazards." />
   <link rel="canonical" href="https://sparehumanservices.com/blog/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Spare Human Services Blog | Pet Safety & Pet Care Tips in Largo, FL" />
+  <meta property="og:description" content="Local pet safety and pet care tips from Spare Human Services in Largo, FL." />
+  <meta property="og:url" content="https://sparehumanservices.com/blog/" />
+  <meta property="og:site_name" content="Spare Human Services" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; color: #1a1a2e; background: #f9f9fb; }
-    header { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; padding: 50px 20px; text-align: center; }
-    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
-    header p { margin: 0; opacity: 0.84; max-width: 760px; margin-left: auto; margin-right: auto; }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .card { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-    .meta { font-size: 0.82rem; color: #7a828b; font-weight: 700; margin-bottom: 8px; }
-    h2 { font-size: 1.15rem; margin: 0 0 10px; }
-    p { line-height: 1.6; color: #444; }
-    a { color: #0f3460; font-weight: 800; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .cta { margin-top: 30px; text-align: center; }
-    .cta a { display: inline-block; background: #0f3460; color: white; padding: 12px 22px; border-radius: 999px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background: #0a1628; color: #e8eef5; }
+    a { text-decoration: none; color: inherit; }
 
-    .card img.thumb { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 14px; display: block; }
-    .card { transition: transform 0.2s, box-shadow 0.2s; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-    .card a.thumb-link { display: block; }
+    .nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(10,22,40,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(94,234,212,0.12); }
+    .nav { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 800; font-size: 1.25rem; color: #5eead4; display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.88rem; font-weight: 600; color: #8ba3c0; }
+    .nav-links a:hover { color: #5eead4; }
+    .nav-phone { background: #5eead4; color: #0a1628; padding: 10px 22px; border-radius: 100px; font-weight: 800; font-size: 0.88rem; }
 
-    footer { text-align: center; padding: 20px; color: #8a8f97; font-size: 0.85rem; }
+    header { background: linear-gradient(135deg, rgba(10,22,40,0.95), rgba(15,52,96,0.8)); padding: 60px 20px 48px; text-align: center; border-bottom: 1px solid rgba(94,234,212,0.1); }
+    header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: #fff; margin-bottom: 10px; }
+    header p { font-size: 1.05rem; color: #8ba3c0; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; transition: all 0.25s; }
+    .card:hover { background: rgba(94,234,212,0.06); border-color: rgba(94,234,212,0.2); transform: translateY(-4px); }
+    .card .thumb-link { display: block; }
+    .card img.thumb { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .card-body { padding: 24px; }
+    .meta { font-size: 0.78rem; color: #5eead4; font-weight: 700; margin-bottom: 8px; }
+    .card h2 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .card p { font-size: 0.92rem; color: #8ba3c0; line-height: 1.55; margin-bottom: 12px; }
+    .card a.read-link { color: #5eead4; font-weight: 700; font-size: 0.88rem; }
+
+    .cta-back { text-align: center; margin-top: 40px; }
+    .cta-back a { display: inline-block; background: rgba(94,234,212,0.1); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 0.95rem; }
+
+    footer { background: #050d1a; border-top: 1px solid rgba(255,255,255,0.06); color: #5a6f8a; text-align: center; padding: 32px 20px; font-size: 0.85rem; }
+    footer a { color: #5eead4; }
+
+    @media (max-width: 768px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
+
+  <div class="nav-wrap">
+    <div class="nav">
+      <div class="nav-logo">🐾 Spare Human Services</div>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#why">Why Us</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+      <a class="nav-phone" href="tel:7273866349">(727) 386-6349</a>
+    </div>
+  </div>
+
   <header>
     <h1>Pet Safety & Pet Care Tips in Largo, FL</h1>
     <p>Local advice from Spare Human Services on dog walking, pet sitting, reactive dogs, Florida weather, and everyday pet safety in Pinellas County.</p>
@@ -38,30 +75,31 @@
 
   <div class="wrap">
     <div class="grid">
-      <div class="card"><a class="thumb-link" href="/blog/why-foster-a-dog.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7fae93f41_generated_image.png" alt="Why You Should Foster a Dog" /></a><div class="meta">Pet Adoption · Community</div><h2>Why You Should Foster a Dog</h2><p>How fostering saves lives, eases shelter overcrowding, and how to prepare your home for a foster dog.</p><a href="/blog/why-foster-a-dog.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/lost-dog-largo-guide.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="What to Do If You See a Lost Dog in Largo" /></a><div class="meta">Pet Safety · Community Guide</div><h2>What to Do If You See a Lost Dog in Largo</h2><p>Step-by-step guide with local shelter and rescue contacts for Pinellas County.</p><a href="/blog/lost-dog-largo-guide.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/dangerous-supplements-vitamins-pets.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/4cc3fc34c_generated_image.png" alt="Dangerous Supplements & Vitamins for Pets" /></a><div class="meta">Pet Safety · Toxicity Prevention</div><h2>Dangerous Supplements & Vitamins for Pets</h2><p>The human supplements that could harm your furry family members — and how to keep them safe.</p><a href="/blog/dangerous-supplements-vitamins-pets.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/bringing-home-new-pet-proofing-guide.html"><img class="thumb" src="https://base44.app/api/apps/69b358bf8e7e209b630af346/files/mp/public/69b358bf8e7e209b630af346/1137c0b1f_lost-dog-3.jpg" alt="Bringing Home a New Pet: The Ultimate Puppy & Kitten Proofing Guide" /></a><div class="meta">Pet Care · New Pet Guide</div><h2>Bringing Home a New Pet: The Ultimate Puppy & Kitten Proofing Guide</h2><p>Everything you need to do before your new furry family member walks through the door — room by room.</p><a href="/blog/bringing-home-new-pet-proofing-guide.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/pet-treat-recall-spring-2026.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Dog Food & Treat Recalls: What Largo Pet Parents Need to Know (Spring 2026)" /></a><div class="meta">Pet Safety · FDA Recalls</div><h2>Dog Food & Treat Recalls: What Largo Pet Parents Need to Know (Spring 2026)</h2><p>Every FDA-listed dog food and treat recall from the last three months — brands, contaminants, lot numbers, and what to do next.</p><a href="/blog/pet-treat-recall-spring-2026.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/hot-pavement-dog-walking-data-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know" /></a><div class="meta">Pet Safety · Data & Sources</div><h2>Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know</h2><p>Real temperature numbers, paw burn thresholds, and safer walking windows for Florida summers — with sources.</p><a href="/blog/hot-pavement-dog-walking-data-largo.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/hurricane-prep-pets-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hurricane Prep for Pet Owners in Pinellas County" /></a><div class="meta">Pet Safety · Hurricane Prep</div><h2>Hurricane Prep for Pet Owners in Pinellas County</h2><p>A simple storm checklist for food, meds, records, tags, carriers, and evacuation planning.</p><a href="/blog/hurricane-prep-pets-pinellas.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/fireworks-safety-dogs-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Fireworks Safety for Dogs in Largo" /></a><div class="meta">Pet Safety · Fireworks</div><h2>Fireworks Safety for Dogs in Largo</h2><p>Escape prevention, calmer routines, and practical planning for loud nights and anxious dogs.</p><a href="/blog/fireworks-safety-dogs-largo.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/florida-backyard-pet-hazards.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Common Florida Backyard Hazards for Dogs" /></a><div class="meta">Pet Safety · Florida Hazards</div><h2>Common Florida Backyard Hazards for Dogs</h2><p>What to watch for in yards around Largo, from hot surfaces and standing water to toads and lawn products.</p><a href="/blog/florida-backyard-pet-hazards.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/beach-water-safety-dogs-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Beach & Water Safety for Dogs in Pinellas County" /></a><div class="meta">Pet Safety · Beach Dogs</div><h2>Beach & Water Safety for Dogs in Pinellas County</h2><p>Heat, saltwater, poor water conditions, and post-swim care all matter more than people think.</p><a href="/blog/beach-water-safety-dogs-pinellas.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/dog-walker-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="How to Choose the Right Dog Walker in Largo" /></a><div class="meta">Dog Walking · Largo, Belleair, Clearwater</div><h2>How to Choose the Right Dog Walker in Largo</h2><p>A quick checklist to find a reliable, safety-first walker with experience handling reactive and large dogs.</p><a href="/blog/dog-walker-largo.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/drop-in-vs-in-home.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Drop-In Visits vs. In-Home Pet Sitting" /></a><div class="meta">Pet Sitting · In-Home Care</div><h2>Drop-In Visits vs. In-Home Pet Sitting</h2><p>Which option is best for your dog? Compare routines, stress levels, and care needs.</p><a href="/blog/drop-in-vs-in-home.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/reactive-dogs-large-breeds.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Care for Reactive Dogs and Large Breeds" /></a><div class="meta">Special Care · Reactive Dogs</div><h2>Care for Reactive Dogs and Large Breeds</h2><p>How calm, confident handling keeps reactive and large dogs safe and happy.</p><a href="/blog/reactive-dogs-large-breeds.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/why-walks-make-dogs-happier.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Why Walks Make Dogs Happier" /></a><div class="meta">Dog Walking · Social Enrichment</div><h2>Why Walks Make Dogs Happier</h2><p>How social enrichment and exercise support calmer, happier dogs.</p><a href="/blog/why-walks-make-dogs-happier.html">Read more →</a></div>
-      <div class="card"><a class="thumb-link" href="/blog/fear-based-reactivity-confidence.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Fear-Based Reactivity and Building Confidence" /></a><div class="meta">Reactive Dogs · Confidence</div><h2>Fear-Based Reactivity and Building Confidence</h2><p>How desensitization, counterconditioning, and calm routines help reactive dogs.</p><a href="/blog/fear-based-reactivity-confidence.html">Read more →</a></div>
+      <div class="card"><a class="thumb-link" href="/blog/why-foster-a-dog.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7fae93f41_generated_image.png" alt="Why You Should Foster a Dog" /></a><div class="card-body"><div class="meta">Pet Adoption · Community</div><h2>Why You Should Foster a Dog</h2><p>How fostering saves lives, eases shelter overcrowding, and how to prepare your home for a foster dog.</p><a class="read-link" href="/blog/why-foster-a-dog.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/lost-dog-largo-guide.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="What to Do If You See a Lost Dog in Largo" /></a><div class="card-body"><div class="meta">Pet Safety · Community Guide</div><h2>What to Do If You See a Lost Dog in Largo</h2><p>Step-by-step guide with local shelter and rescue contacts for Pinellas County.</p><a class="read-link" href="/blog/lost-dog-largo-guide.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/dangerous-supplements-vitamins-pets.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/4cc3fc34c_generated_image.png" alt="Dangerous Supplements & Vitamins for Pets" /></a><div class="card-body"><div class="meta">Pet Safety · Toxicity Prevention</div><h2>Dangerous Supplements & Vitamins for Pets</h2><p>The human supplements that could harm your furry family members — and how to keep them safe.</p><a class="read-link" href="/blog/dangerous-supplements-vitamins-pets.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/bringing-home-new-pet-proofing-guide.html"><img class="thumb" src="https://base44.app/api/apps/69b358bf8e7e209b630af346/files/mp/public/69b358bf8e7e209b630af346/1137c0b1f_lost-dog-3.jpg" alt="Bringing Home a New Pet: The Ultimate Puppy & Kitten Proofing Guide" /></a><div class="card-body"><div class="meta">Pet Care · New Pet Guide</div><h2>Bringing Home a New Pet: The Ultimate Puppy & Kitten Proofing Guide</h2><p>Everything you need to do before your new furry family member walks through the door — room by room.</p><a class="read-link" href="/blog/bringing-home-new-pet-proofing-guide.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/pet-treat-recall-spring-2026.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7a3895100_generated_image.png" alt="Dog Food & Treat Recalls: 2026 Update" /></a><div class="card-body"><div class="meta">Pet Safety · FDA Recalls</div><h2>Dog Food & Treat Recalls: What Largo Pet Parents Need to Know (2026)</h2><p>Every FDA-listed dog food and treat recall from the last few months — brands, contaminants, lot numbers, and what to do next.</p><a class="read-link" href="/blog/pet-treat-recall-spring-2026.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/hot-pavement-dog-walking-data-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/77a190303_generated_image.png" alt="Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know" /></a><div class="card-body"><div class="meta">Pet Safety · Data & Sources</div><h2>Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know</h2><p>Real temperature numbers, paw burn thresholds, and safer walking windows for Florida summers — with sources.</p><a class="read-link" href="/blog/hot-pavement-dog-walking-data-largo.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/hurricane-prep-pets-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hurricane Prep for Pet Owners in Pinellas County" /></a><div class="card-body"><div class="meta">Pet Safety · Hurricane Prep</div><h2>Hurricane Prep for Pet Owners in Pinellas County</h2><p>A simple storm checklist for food, meds, records, tags, carriers, and evacuation planning.</p><a class="read-link" href="/blog/hurricane-prep-pets-pinellas.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/fireworks-safety-dogs-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Fireworks Safety for Dogs in Largo" /></a><div class="card-body"><div class="meta">Pet Safety · Fireworks</div><h2>Fireworks Safety for Dogs in Largo</h2><p>Escape prevention, calmer routines, and practical planning for loud nights and anxious dogs.</p><a class="read-link" href="/blog/fireworks-safety-dogs-largo.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/florida-backyard-pet-hazards.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Common Florida Backyard Hazards for Dogs" /></a><div class="card-body"><div class="meta">Pet Safety · Florida Hazards</div><h2>Common Florida Backyard Hazards for Dogs</h2><p>What to watch for in yards around Largo, from hot surfaces and standing water to toads and lawn products.</p><a class="read-link" href="/blog/florida-backyard-pet-hazards.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/beach-water-safety-dogs-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Beach & Water Safety for Dogs in Pinellas County" /></a><div class="card-body"><div class="meta">Pet Safety · Beach Dogs</div><h2>Beach & Water Safety for Dogs in Pinellas County</h2><p>Heat, saltwater, poor water conditions, and post-swim care all matter more than people think.</p><a class="read-link" href="/blog/beach-water-safety-dogs-pinellas.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/dog-walker-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="How to Choose the Right Dog Walker in Largo" /></a><div class="card-body"><div class="meta">Dog Walking · Largo, Belleair, Clearwater</div><h2>How to Choose the Right Dog Walker in Largo</h2><p>A quick checklist to find a reliable, safety-first walker with experience handling reactive and large dogs.</p><a class="read-link" href="/blog/dog-walker-largo.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/drop-in-vs-in-home.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Drop-In Visits vs. In-Home Pet Sitting" /></a><div class="card-body"><div class="meta">Pet Sitting · In-Home Care</div><h2>Drop-In Visits vs. In-Home Pet Sitting</h2><p>Which option is best for your dog? Compare routines, stress levels, and care needs.</p><a class="read-link" href="/blog/drop-in-vs-in-home.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/reactive-dogs-large-breeds.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Care for Reactive Dogs and Large Breeds" /></a><div class="card-body"><div class="meta">Special Care · Reactive Dogs</div><h2>Care for Reactive Dogs and Large Breeds</h2><p>How calm, confident handling keeps reactive and large dogs safe and happy.</p><a class="read-link" href="/blog/reactive-dogs-large-breeds.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/why-walks-make-dogs-happier.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Why Walks Make Dogs Happier" /></a><div class="card-body"><div class="meta">Dog Walking · Social Enrichment</div><h2>Why Walks Make Dogs Happier</h2><p>How social enrichment and exercise support calmer, happier dogs.</p><a class="read-link" href="/blog/why-walks-make-dogs-happier.html">Read more →</a></div></div>
+      <div class="card"><a class="thumb-link" href="/blog/fear-based-reactivity-confidence.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Fear-Based Reactivity and Building Confidence" /></a><div class="card-body"><div class="meta">Reactive Dogs · Confidence</div><h2>Fear-Based Reactivity and Building Confidence</h2><p>How desensitization, counterconditioning, and calm routines help reactive dogs.</p><a class="read-link" href="/blog/fear-based-reactivity-confidence.html">Read more →</a></div></div>
     </div>
 
-    <div class="cta">
-      <a href="/">Back to Home</a>
+    <div class="cta-back">
+      <a href="/">← Back to Home</a>
     </div>
   </div>
 
   <footer>
-    Spare Human Services · Largo, FL · (727) 386-6349
+    Spare Human Services · Largo, FL · <a href="tel:7273866349">727-386-6349</a> · Licensed & Insured
   </footer>
+
 </body>
 </html>
