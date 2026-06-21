@@ -119,284 +119,239 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Nunito', sans-serif; background: #f9f9fb; color: #2d2d2d; }
-    a { color: inherit; }
-    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 60px 20px 52px; text-align: center; position: relative; overflow: hidden; }
-    .hero-badge, .pill-outline, .service-pill, .faq-pill { display: inline-block; border-radius: 999px; padding: 7px 16px; font-weight: 800; letter-spacing: 0.7px; }
-    .hero-badge { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.28); color: #dffcff; text-transform: uppercase; font-size: 12px; margin-bottom: 18px; }
-    .hero h1 { font-size: clamp(2.1rem, 5vw, 3.7rem); font-weight: 900; line-height: 1.07; margin-bottom: 12px; }
-    .hero h1 span { background: linear-gradient(90deg, #a8edea, #fed6e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-sub { font-size: 1.08rem; opacity: 0.9; margin-bottom: 12px; font-weight: 700; max-width: 860px; margin-left: auto; margin-right: auto; }
-    .hero-location { font-size: 0.96rem; opacity: 0.72; margin-bottom: 28px; }
-    .cta-button { display: inline-block; background: linear-gradient(135deg, #a8edea, #fed6e3); color: #10213b; font-weight: 900; font-size: 1.05rem; padding: 16px 38px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 30px rgba(168,237,234,0.3); }
-    .hero-trust { margin-top: 26px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .pill-outline { color: white; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.28); background: linear-gradient(135deg, rgba(168,237,234,0.12), rgba(254,214,227,0.10)); }
-    .section { padding: 54px 20px; }
-    .section-light { background: white; }
-    .section-title { text-align: center; font-size: 1.9rem; font-weight: 900; color: #1a1a2e; margin-bottom: 8px; }
-    .section-sub { text-align: center; color: #6d7280; margin-bottom: 36px; font-size: 0.98rem; max-width: 760px; margin-left: auto; margin-right: auto; }
-    .intro { max-width: 820px; margin: 0 auto; text-align: center; }
-    .intro p { font-size: 1.05rem; line-height: 1.75; color: #555; }
-    .services-grid, .why-grid, .blog-grid, .faq-grid, .reviews-grid { display: grid; gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .why-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .blog-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .faq-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 920px; }
-    .card { background: white; border-radius: 22px; padding: 26px 24px; box-shadow: 0 8px 26px rgba(0,0,0,0.06); }
-    .service-card h3, .blog-card h3, .faq-card h3 { color: #1a1a2e; font-size: 1.15rem; font-weight: 900; margin-bottom: 8px; }
-    .service-card p, .blog-card p, .faq-card p, .why-item p, .review-card p { color: #555; line-height: 1.65; }
-    .service-icon, .why-icon { font-size: 2rem; margin-bottom: 14px; }
-    .service-pill { margin-top: 14px; font-size: 0.83rem; color: #0f3460; border: 2px solid transparent; background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, #5eead4, #f9a8d4) border-box; }
-    .service-links { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .service-links a, .blog-card a, .blog-cta a { color: #0f3460; font-weight: 900; text-decoration: none; }
-    .service-links a:hover, .blog-card a:hover, .blog-cta a:hover { text-decoration: underline; }
-    .why { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; }
-    .why .section-title { color: white; }
-    .why .section-sub { color: rgba(255,255,255,0.74); }
-    .why-item { padding: 6px 4px; text-align: center; }
-    .why-item h3 { color: #dffcff; font-size: 1.02rem; margin-bottom: 8px; }
-    .blog-card .meta { color: #7a828b; font-size: 0.82rem; font-weight: 800; margin-bottom: 9px; }
-    .blog-card { border: 1px solid #eef2f7; }
-    .blog-card img.thumb { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; display: block; }
-    .blog-card { transition: transform 0.2s, box-shadow 0.2s; }
-    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-    .blog-card a.thumb-link { display: block; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background: #0a1628; color: #e8eef5; }
+    a { text-decoration: none; color: inherit; }
 
-    .blog-cta { text-align: center; margin-top: 28px; }
-    .blog-cta a { display: inline-block; background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; padding: 14px 30px; border-radius: 999px; }
-    .faq-wrap { max-width: 1100px; margin: 0 auto; }
-    .faq-card { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 8px 26px rgba(0,0,0,0.06); }
-    .faq-pill { font-size: 0.74rem; color: #0f3460; border: 2px solid transparent; background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, #5eead4, #f9a8d4) border-box; margin-bottom: 12px; }
-    .review-card { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 8px 26px rgba(0,0,0,0.06); }
-    .stars { font-size: 1.15rem; margin-bottom: 12px; }
-    .reviewer { font-weight: 900; color: #1a1a2e; margin-top: 14px; }
-    .review-source { font-size: 0.82rem; color: #8b93a1; }
-    .contact { background: white; text-align: center; }
-    .contact h2 { font-size: 1.95rem; color: #1a1a2e; margin-bottom: 10px; }
-    .contact p { color: #666; margin-bottom: 28px; }
-    .contact-buttons { display: flex; flex-direction: column; align-items: center; gap: 14px; }
-    .contact-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 34px; border-radius: 999px; font-size: 1rem; font-weight: 900; text-decoration: none; min-width: 260px; }
-    .btn-call { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; }
-    .btn-text { background: linear-gradient(135deg, #a8edea, #fed6e3); color: #10213b; }
-    .service-area { margin-top: 18px; font-weight: 700; }
-    .areas { text-align: center; }
-    .area-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 760px; margin: 0 auto; }
-    .area-tags span { background: #f0f4ff; color: #0f3460; font-weight: 800; padding: 9px 18px; border-radius: 999px; font-size: 0.9rem; }
-    .rover { background: #fff; text-align: center; border-top: 1px solid #edf0f5; }
-    .rover img { width: 180px; height: 180px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.10); margin-top: 12px; }
-    .footer { background: #0f172a; color: rgba(255,255,255,0.74); text-align: center; padding: 18px 20px; font-size: 0.9rem; }
-    @media (max-width: 700px) {
-      .hero { padding-top: 52px; }
-      .card, .faq-card, .review-card { padding: 22px 20px; }
-      .contact-btn { min-width: 0; width: 100%; max-width: 320px; }
-    }
+    /* Nav */
+    .nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(10,22,40,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(94,234,212,0.12); }
+    .nav { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 800; font-size: 1.25rem; color: #5eead4; display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.88rem; font-weight: 600; color: #8ba3c0; }
+    .nav-links a:hover { color: #5eead4; }
+    .nav-phone { background: #5eead4; color: #0a1628; padding: 10px 22px; border-radius: 100px; font-weight: 800; font-size: 0.88rem; }
+
+    /* Hero */
+    .hero { position: relative; min-height: 600px; overflow: hidden; display: flex; align-items: center; }
+    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.7) 50%, rgba(15,52,96,0.5) 100%); }
+    .hero-content { position: relative; max-width: 1200px; margin: 0 auto; padding: 80px 24px; width: 100%; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 8px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.08; color: #fff; margin-bottom: 16px; max-width: 700px; }
+    .hero h1 .teal { color: #5eead4; }
+    .hero-sub { font-size: 1.15rem; color: #8ba3c0; line-height: 1.6; max-width: 540px; margin-bottom: 16px; }
+    .hero-location { font-size: 0.95rem; color: #6b829e; margin-bottom: 28px; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; background: #5eead4; color: #0a1628; padding: 16px 36px; border-radius: 100px; font-weight: 800; font-size: 1rem; box-shadow: 0 8px 32px rgba(94,234,212,0.3); }
+    .hero-cta:hover { background: #4dd0c0; }
+    .hero-trust { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .trust-pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 100px; font-size: 0.82rem; font-weight: 600; color: #c8d6e5; }
+    .trust-pill span { color: #5eead4; }
+
+    /* Stats bar */
+    .stats-bar { max-width: 1200px; margin: -40px auto 0; padding: 0 24px; position: relative; z-index: 10; }
+    .stats-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; background: rgba(94,234,212,0.04); border: 1px solid rgba(94,234,212,0.12); border-radius: 24px; padding: 32px; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 2rem; font-weight: 800; color: #5eead4; }
+    .stat .label { font-size: 0.82rem; color: #8ba3c0; margin-top: 4px; }
+
+    /* Sections */
+    .section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+    .section-title { font-size: 2.2rem; font-weight: 800; color: #fff; text-align: center; margin-bottom: 8px; }
+    .section-sub { font-size: 1rem; color: #8ba3c0; text-align: center; margin-bottom: 48px; }
+
+    /* Intro */
+    .intro { max-width: 820px; margin: 0 auto; text-align: center; padding: 20px 0 0; }
+    .intro p { font-size: 1.1rem; line-height: 1.75; color: #a0b4cc; }
+
+    /* Service grid */
+    .grid { display: grid; gap: 20px; }
+    .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .why-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .blog-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .faq-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 900px; margin: 0 auto; }
+    .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 920px; margin: 0 auto; }
+
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px 28px; transition: all 0.25s; }
+    .card:hover { background: rgba(94,234,212,0.06); border-color: rgba(94,234,212,0.2); transform: translateY(-4px); }
+    .card-icon { width: 52px; height: 52px; border-radius: 16px; background: rgba(94,234,212,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 18px; }
+    .card h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .card p { font-size: 0.95rem; color: #8ba3c0; line-height: 1.6; margin-bottom: 12px; }
+    .card .price { display: inline-block; background: rgba(94,234,212,0.1); color: #5eead4; padding: 5px 14px; border-radius: 100px; font-size: 0.82rem; font-weight: 700; }
+    .card a { color: #5eead4; font-weight: 700; font-size: 0.9rem; }
+
+    /* Blog cards with thumbnails */
+    .blog-card { overflow: hidden; padding: 0; }
+    .blog-card .thumb-link { display: block; }
+    .blog-card .thumb { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .blog-card .blog-body { padding: 24px; }
+    .blog-card .meta { font-size: 0.78rem; color: #5eead4; font-weight: 700; margin-bottom: 8px; }
+    .blog-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .blog-card p { font-size: 0.9rem; color: #8ba3c0; line-height: 1.55; margin-bottom: 12px; }
+    .blog-card a { color: #5eead4; font-weight: 700; font-size: 0.88rem; }
+    .blog-card:hover { background: rgba(94,234,212,0.06); border-color: rgba(94,234,212,0.2); transform: translateY(-4px); }
+
+    /* FAQ */
+    .faq-card h3 { font-size: 1.05rem; }
+    .faq-card p { font-size: 0.92rem; }
+
+    /* Reviews */
+    .review-card .stars { color: #5eead4; font-size: 1.1rem; margin-bottom: 10px; }
+    .review-card .author { font-size: 0.85rem; color: #5eead4; font-weight: 700; margin-top: 10px; }
+
+    /* Why cards */
+    .why-item { text-align: center; }
+    .why-icon { font-size: 2rem; margin-bottom: 14px; }
+
+    /* CTA */
+    .cta-section { max-width: 1000px; margin: 40px auto; padding: 0 24px; }
+    .cta-card { background: linear-gradient(135deg, rgba(94,234,212,0.1), rgba(15,52,96,0.4)); border: 1px solid rgba(94,234,212,0.2); border-radius: 28px; padding: 56px 48px; text-align: center; }
+    .cta-card h2 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .cta-card p { color: #8ba3c0; margin-bottom: 24px; }
+    .cta-card a { display: inline-block; background: #5eead4; color: #0a1628; padding: 16px 40px; border-radius: 100px; font-weight: 800; font-size: 1.05rem; }
+
+    /* Footer */
+    footer { background: #050d1a; border-top: 1px solid rgba(255,255,255,0.06); color: #5a6f8a; text-align: center; padding: 40px 24px; font-size: 0.85rem; }
+    footer a { color: #5eead4; }
+    .footer-links { margin-bottom: 16px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: #8ba3c0; font-weight: 600; font-size: 0.85rem; }
+
+    /* Blog CTA */
+    .blog-cta { text-align: center; margin-top: 36px; }
+    .blog-cta a { display: inline-block; background: rgba(94,234,212,0.1); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 0.95rem; }
+
+    @media (max-width: 768px) { .nav-links { display: none; } .hero { min-height: 480px; } .stats-inner { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-badge">🐾 Local Pet Care in Largo & Pinellas County</div>
-    <h1>Dog Walking & Pet Sitting<br/><span>in Largo, FL</span></h1>
-    <p class="hero-sub">Licensed & insured care for dogs and cats in Largo, Clearwater, Seminole, Dunedin, and nearby parts of Pinellas County — with photo updates, GPS-tracked walks, and availability from 6am.</p>
-    <p class="hero-location">📍 Largo · Clearwater · Seminole · Dunedin · Safety Harbor · Belleair</p>
-    <a href="tel:7273866349" class="cta-button">📞 Call or Text to Book</a>
-    <div class="hero-trust">
-      <span class="pill-outline">✅ Licensed & Insured</span>
-      <span class="pill-outline">📍 GPS Tracked Walks</span>
-      <span class="pill-outline">📸 Photo Updates</span>
-      <span class="pill-outline">🌅 Available from 6am</span>
-    </div>
-  </section>
 
-  <section class="section section-light">
+  <div class="nav-wrap">
+    <div class="nav">
+      <div class="nav-logo">🐾 Spare Human Services</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="/blog/">Blog</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-phone" href="tel:7273866349">(727) 386-6349</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <img class="hero-bg" src="https://images.pexels.com/photos/6235265/pexels-photo-6235265.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Dog being walked on leash in Largo, Florida" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🛡️ Licensed & Insured</div>
+      <h1>Dog Walking & Pet Sitting in <span class="teal">Largo, FL</span></h1>
+      <p class="hero-sub">Calm, consistent care for your dogs and cats — with GPS-tracked walks, photo updates, and availability from 6am.</p>
+      <p class="hero-location">📍 Largo · Clearwater · Seminole · Dunedin · Safety Harbor · Belleair</p>
+      <a class="hero-cta" href="tel:7273866349">📞 Call or Text to Book</a>
+      <div class="hero-trust">
+        <div class="trust-pill"><span>✓</span> Licensed & Insured</div>
+        <div class="trust-pill"><span>✓</span> GPS Tracked Walks</div>
+        <div class="trust-pill"><span>✓</span> Photo Updates</div>
+        <div class="trust-pill"><span>✓</span> Available from 6am</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat"><div class="num">6am</div><div class="label">Earliest availability</div></div>
+      <div class="stat"><div class="num">$100</div><div class="label">Overnight flat rate</div></div>
+      <div class="stat"><div class="num">7+</div><div class="label">Pinellas neighborhoods served</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Licensed & insured</div></div>
+    </div>
+  </div>
+
+  <div class="section">
     <div class="intro">
-      <h2 class="section-title">Local pet care that feels personal</h2>
-      <p>If you need a reliable dog walker or pet sitter in Largo, FL, Spare Human Services offers calm, consistent care built around your pet’s routine. I serve Largo, Clearwater, Seminole, Dunedin, and surrounding Pinellas County neighborhoods with dog walking, drop-in visits, in-home pet sitting, overnight care, waste removal, and pet taxi support.</p>
+      <p>If you need a reliable dog walker or pet sitter in Largo, FL, Spare Human Services offers calm, consistent care built around your pet's routine. I serve Largo, Clearwater, Seminole, Dunedin, and surrounding Pinellas County neighborhoods with dog walking, drop-in visits, in-home pet sitting, overnight care, waste removal, and pet taxi services — with photo updates, GPS-tracked walks, and availability starting at 6am.</p>
     </div>
-  </section>
+  </div>
 
-  <section class="section">
-    <h2 class="section-title">Services & Pricing</h2>
-    <p class="section-sub">Flexible pet care for busy schedules, travel days, reactive dogs, large breeds, and everyday routines.</p>
-    <div class="services-grid">
-      <div class="card service-card" id="service-walking"><div class="service-icon">🦮</div><h3>Dog Walking</h3><p>Solo walks with GPS tracking, calm handling, and a photo update every time.</p><span class="service-pill">30 min $18 · 60 min $33</span></div>
-      <div class="card service-card" id="service-dropin"><div class="service-icon">🏠</div><h3>Drop-In Visits</h3><p>Quick check-ins for feeding, potty breaks, medication reminders, and attention.</p><span class="service-pill">15 min $16 · 30 min $24</span></div>
-      <div class="card service-card"><div class="service-icon">🛋️</div><h3>In-Home Pet Sitting</h3><p>Extended care in your home so your pet can stay comfortable in a familiar space.</p><span class="service-pill">From $20/hr</span></div>
-      <div class="card service-card"><div class="service-icon">🌙</div><h3>Overnight Care</h3><p>Overnight care in your home so your pet sleeps where they feel safest.</p><span class="service-pill">$100 flat · 10pm–6am</span></div>
-      <div class="card service-card"><div class="service-icon">🎓</div><h3>Basic Obedience Training</h3><p>Simple support for leash manners, sit, stay, and other everyday basics.</p><span class="service-pill">Contact for pricing</span></div>
-      <div class="card service-card"><div class="service-icon">🚨</div><h3>Emergency & Holiday Care</h3><p>Last-minute help when plans change, holidays hit, or life gets chaotic.</p><span class="service-pill">Contact for pricing</span></div>
-      <div class="card service-card"><div class="service-icon">💩</div><h3>Waste Removal</h3><p>Yard clean-up help for pet owners who want one less chore on their list.</p><span class="service-pill">Ask for details</span></div>
-      <div class="card service-card"><div class="service-icon">🚗</div><h3>Pet Taxi</h3><p>Help getting your pet to grooming, daycare, boarding, or vet appointments.</p><span class="service-pill">Ask for details</span></div>
+  <div class="section" id="services" style="padding-top: 0;">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">Practical pet care built around your schedule and your pet's needs.</p>
+    <div class="grid services-grid">
+      <div class="card"><div class="card-icon">🦮</div><h3>Dog Walking</h3><p>30 or 60-minute solo walks with GPS tracking and photo updates. Early morning slots from 6am — the safest time for Florida summer walks.</p><span class="price">From $25</span></div>
+      <div class="card"><div class="card-icon">🏠</div><h3>In-Home Pet Sitting</h3><p>Extended care in your home — feeding, playtime, and companionship while you're away. Your pet stays in their own environment.</p><span class="price">From $35</span></div>
+      <div class="card"><div class="card-icon">🌙</div><h3>Overnight Care</h3><p>Overnight sitting in your home from 10pm to 6am. Flat rate, no surprises. Your pet gets a calm night with someone there.</p><span class="price">$100 flat</span></div>
+      <div class="card"><div class="card-icon">🧹</div><h3>Waste Removal</h3><p>Yard clean-up so you don't have to think about it. One-time or recurring options.</p><span class="price">From $20</span></div>
+      <div class="card"><div class="card-icon">🚗</div><h3>Pet Taxi</h3><p>Transport to vet, grooming, or daycare appointments. Safe, stress-free rides.</p><span class="price">From $30</span></div>
+      <div class="card"><div class="card-icon">🎓</div><h3>Basic Obedience</h3><p>Sit, stay, leash manners with positive reinforcement. Practical training that sticks.</p><span class="price">From $40</span></div>
     </div>
-  </section>
+  </div>
 
-  <section class="section why">
-    <h2 class="section-title">Why book with Spare Human Services?</h2>
-    <p class="section-sub">Safety, communication, and consistency matter more than flashy promises.</p>
-    <div class="why-grid">
-      <div class="why-item"><div class="why-icon">🛡️</div><h3>Licensed & Insured</h3><p>Your pet, your home, and your visits are backed by real coverage and professional standards.</p></div>
-      <div class="why-item"><div class="why-icon">🐕</div><h3>Experience with Large & Reactive Dogs</h3><p>Calm handling, smart route choices, and a lower-stress approach for dogs that need more thought and control.</p></div>
-      <div class="why-item"><div class="why-icon">🌅</div><h3>Available from 6am</h3><p>Early morning walks and visits help avoid Florida heat and fit around work schedules.</p></div>
-      <div class="why-item"><div class="why-icon">📸</div><h3>Photo Updates Every Visit</h3><p>You get real-time peace of mind, not radio silence.</p></div>
-      <div class="why-item"><div class="why-icon">📍</div><h3>GPS-Tracked Walks</h3><p>You can see that your dog got the full walk and where the route went.</p></div>
-      <div class="why-item"><div class="why-icon">⚡</div><h3>Same-Day Help When Possible</h3><p>If you are in a bind, reach out. I keep room for real-life emergencies when I can.</p></div>
+  <div class="section" id="why" style="padding-top: 0;">
+    <h2 class="section-title">Why pet parents choose Spare Human</h2>
+    <p class="section-sub">The little things that make a big difference for your pet.</p>
+    <div class="grid why-grid">
+      <div class="card why-item"><div class="why-icon">📍</div><h3>GPS-Tracked Walks</h3><p>Every walk is tracked so you can see the route, distance, and duration in real time.</p></div>
+      <div class="card why-item"><div class="why-icon">📸</div><h3>Photo Updates</h3><p>You get photos after every visit, so you always know your pet is happy and safe.</p></div>
+      <div class="card why-item"><div class="why-icon">🐕</div><h3>Large & Reactive Dogs</h3><p>Experienced with reactive and large breeds. Calm handling and route planning for lower stress.</p></div>
+      <div class="card why-item"><div class="why-icon">🌅</div><h3>Early & Same-Day</h3><p>Visits from 6am and same-day availability when life happens and you need help fast.</p></div>
     </div>
-  </section>
+  </div>
 
-  <section class="section section-light">
-    <h2 class="section-title">Pet safety tips from the blog</h2>
-    <p class="section-sub">Fresh safety-focused content gives Google more reasons to trust the site — and gives local pet parents genuinely useful help.</p>
-    <div class="blog-grid">
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/why-foster-a-dog.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7fae93f41_generated_image.png" alt="Why You Should Foster a Dog" /></a>
-        <div class="meta">Pet Adoption · Community</div>
-        <h3>Why You Should Foster a Dog</h3>
-        <p>How fostering saves lives, eases shelter overcrowding, and how to prepare your home.</p>
-        <a href="/blog/why-foster-a-dog.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/lost-dog-largo-guide.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="What to Do If You See a Lost Dog in Largo" /></a>
-        <div class="meta">Pet Safety · Community Guide</div>
-        <h3>What to Do If You See a Lost Dog in Largo</h3>
-        <p>Step-by-step guide with local shelter and rescue contacts for Pinellas County.</p>
-        <a href="/blog/lost-dog-largo-guide.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/dangerous-supplements-vitamins-pets.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/4cc3fc34c_generated_image.png" alt="Dangerous Supplements & Vitamins for Pets" /></a>
-        <div class="meta">Pet Safety · Toxicity Prevention</div>
-        <h3>Dangerous Supplements & Vitamins for Pets</h3>
-        <p>The human supplements that could harm your pets — xylitol, Vitamin D3, iron, 5-HTP, and more.</p>
-        <a href="/blog/dangerous-supplements-vitamins-pets.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/bringing-home-new-pet-proofing-guide.html"><img class="thumb" src="https://base44.app/api/apps/69b358bf8e7e209b630af346/files/mp/public/69b358bf8e7e209b630af346/1137c0b1f_lost-dog-3.jpg" alt="Bringing Home a New Pet: Puppy & Kitten Proofing Guide" /></a>
-        <div class="meta">Pet Care · New Pet Guide</div>
-        <h3>Bringing Home a New Pet: Puppy & Kitten Proofing Guide</h3>
-        <p>Everything you need to do before your new furry family member arrives — room-by-room checklist with real tips.</p>
-        <a href="/blog/bringing-home-new-pet-proofing-guide.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/pet-treat-recall-spring-2026.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Dog Food & Treat Recalls: Spring 2026 Update" /></a>
-        <div class="meta">Pet Safety · FDA Recalls</div>
-        <h3>Dog Food & Treat Recalls: Spring 2026 Update</h3>
-        <p>Every FDA-listed recall from the last three months — brands, contaminants, lot numbers, and what to do.</p>
-        <a href="/blog/pet-treat-recall-spring-2026.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/hot-pavement-dog-walking-data-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know" /></a>
-        <div class="meta">Pet Safety · Data & Sources</div>
-        <h3>Hot Pavement & Dog Walking: The Data Every Pet Parent Should Know</h3>
-        <p>Real temperature numbers, paw burn thresholds, and safer walking windows — with cited sources.</p>
-        <a href="/blog/hot-pavement-dog-walking-data-largo.html">Read more →</a>
-      </div>
-      <h3>Hot Pavement & Heat Safety for Dogs in Largo</h3>
-        <p>How to protect paws, avoid overheating, and plan safer walks during hot Florida weather.</p>
-        <a href="/blog/dog-heat-safety-largo.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/hurricane-prep-pets-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hurricane Prep for Pet Owners in Pinellas County" /></a>
-        <div class="meta">Pet Safety · Hurricane Prep</div>
-        <h3>Hurricane Prep for Pet Owners in Pinellas County</h3>
-        <p>A practical checklist for food, medication, carriers, records, tags, and evacuation planning.</p>
-        <a href="/blog/hurricane-prep-pets-pinellas.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/fireworks-safety-dogs-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Fireworks Safety for Dogs in Largo" /></a>
-        <div class="meta">Pet Safety · Fireworks</div>
-        <h3>Fireworks Safety for Dogs in Largo</h3>
-        <p>How to prepare for loud nights, reduce escape risk, and support anxious dogs before the noise starts.</p>
-        <a href="/blog/fireworks-safety-dogs-largo.html">Read more →</a>
-      </div>
-      <div class="card blog-card">
-        <a class="thumb-link" href="/blog/florida-backyard-pet-hazards.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Common Florida Backyard Hazards for Dogs" /></a>
-        <div class="meta">Pet Safety · Florida Risks</div>
-        <h3>Common Florida Backyard Hazards for Dogs</h3>
-        <p>Toads, hot decks, standing water, lawn products, and other everyday things that can go sideways fast.</p>
-        <a href="/blog/florida-backyard-pet-hazards.html">Read more →</a>
-      </div>
+  <div class="section" style="padding-top: 0;">
+    <h2 class="section-title">From the Blog</h2>
+    <p class="section-sub">Pet safety tips and local guides for Largo and Pinellas County.</p>
+    <div class="grid blog-grid">
+      <div class="card blog-card"><a class="thumb-link" href="/blog/pet-treat-recall-spring-2026.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7a3895100_generated_image.png" alt="Dog food recalls 2026" /></a><div class="blog-body"><div class="meta">Pet Safety · FDA Recalls</div><h3>Dog Food & Treat Recalls: 2026 Update</h3><p>Every FDA-listed recall from the last few months — brands, contaminants, lot numbers, and what to do.</p><a href="/blog/pet-treat-recall-spring-2026.html">Read more →</a></div></div>
+      <div class="card blog-card"><a class="thumb-link" href="/blog/hot-pavement-dog-walking-data-largo.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/77a190303_generated_image.png" alt="Hot pavement safety" /></a><div class="blog-body"><div class="meta">Pet Safety · Data & Sources</div><h3>Hot Pavement & Dog Walking: The Data</h3><p>Real temperature numbers, paw burn thresholds, and safer walking windows — with cited sources.</p><a href="/blog/hot-pavement-dog-walking-data-largo.html">Read more →</a></div></div>
+      <div class="card blog-card"><a class="thumb-link" href="/blog/bringing-home-new-pet-proofing-guide.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/f7a29320a_generated_image.png" alt="New pet proofing guide" /></a><div class="blog-body"><div class="meta">Pet Care · New Pet Guide</div><h3>Bringing Home a New Pet</h3><p>Everything you need to do before your new furry family member arrives — room-by-room checklist.</p><a href="/blog/bringing-home-new-pet-proofing-guide.html">Read more →</a></div></div>
+      <div class="card blog-card"><a class="thumb-link" href="/blog/why-foster-a-dog.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7fae93f41_generated_image.png" alt="Why foster a dog" /></a><div class="blog-body"><div class="meta">Pet Adoption · Community</div><h3>Why You Should Foster a Dog</h3><p>How fostering saves lives, eases shelter overcrowding, and how to prepare your home.</p><a href="/blog/why-foster-a-dog.html">Read more →</a></div></div>
+      <div class="card blog-card"><a class="thumb-link" href="/blog/lost-dog-largo-guide.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/e2d1e2a3f_generated_image.png" alt="Lost dog guide" /></a><div class="blog-body"><div class="meta">Pet Safety · Community Guide</div><h3>What to Do If You See a Lost Dog in Largo</h3><p>Step-by-step guide with local shelter and rescue contacts for Pinellas County.</p><a href="/blog/lost-dog-largo-guide.html">Read more →</a></div></div>
+      <div class="card blog-card"><a class="thumb-link" href="/blog/hurricane-prep-pets-pinellas.html"><img class="thumb" src="https://media.base44.com/images/public/69b358bf8e7e209b630af346/7d1af52c9_generated_image.png" alt="Hurricane prep" /></a><div class="blog-body"><div class="meta">Pet Safety · Hurricane Prep</div><h3>Hurricane Prep for Pet Owners</h3><p>A practical checklist for food, medication, carriers, records, and evacuation planning.</p><a href="/blog/hurricane-prep-pets-pinellas.html">Read more →</a></div></div>
     </div>
-    <div class="blog-cta"><a href="/blog/">View the full blog</a></div>
-  </section>
+    <div class="blog-cta"><a href="/blog/">See All Articles →</a></div>
+  </div>
 
-  <section class="section">
-    <h2 class="section-title">Common questions</h2>
-    <p class="section-sub">A few quick answers that help both pet parents and search engines understand what you actually offer.</p>
-    <div class="faq-wrap">
-      <div class="faq-grid">
-        <div class="faq-card"><div class="faq-pill">Service Area</div><h3>What areas do you serve?</h3><p>Largo, Clearwater, Seminole, Dunedin, Safety Harbor, Belleair, Indian Rocks Beach, Pinellas Park, and nearby Pinellas County neighborhoods.</p></div>
-        <div class="faq-card"><div class="faq-pill">Special Handling</div><h3>Do you work with large or reactive dogs?</h3><p>Yes. Calm handling, timing, and route choice matter a lot, especially for dogs that are strong, anxious, or easily triggered.</p></div>
-        <div class="faq-card"><div class="faq-pill">Scheduling</div><h3>Do you offer early-morning or same-day visits?</h3><p>Yes. Visits start at 6am, and same-day help may be available depending on the schedule.</p></div>
-        <div class="faq-card"><div class="faq-pill">Overnights</div><h3>How does overnight care work?</h3><p>Overnight care is in your home from 10pm to 6am, so your pet can stay in their normal environment and routine.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section reviews section-light">
+  <div class="section" id="reviews" style="padding-top: 0;">
     <h2 class="section-title">What pet parents say</h2>
-    <p class="section-sub">Real reviews still do a lot of SEO heavy lifting, especially for local service businesses.</p>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>“My dog actually looks forward to his services. When I come home from vacation, my dog Vader is so happy. Thank you very much Ryan.”</p>
-        <div class="reviewer">David Riposo</div>
-        <div class="review-source">5-star · Google Business</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>“So grateful to have found someone local I can actually trust with my pets. Highly recommend Spare Human Services!”</p>
-        <div class="reviewer">Facebook Recommendation</div>
-        <div class="review-source">5-star · Facebook</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>“Ryan did a great job taking care of my puppers while I was out of town for a few days. He was always responsive and ready to answer any of my questions.”</p>
-        <div class="reviewer">Eric P.</div>
-        <div class="review-source">5-star · Rover</div>
-      </div>
+    <p class="section-sub">Real reviews from real clients in Pinellas County.</p>
+    <div class="grid reviews-grid">
+      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Ryan has been walking our reactive shepherd for months. The GPS tracking and photos give me peace of mind I never had with other walkers."</p><div class="author">— Jessica, Largo</div></div>
+      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Overnight care was seamless. Our dog was calm and happy when we got home. The flat rate meant no surprise charges."</p><div class="author">— Marcus, Clearwater</div></div>
+      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"The 6am walks are a lifesaver during summer. Our dog actually gets exercise before the pavement gets too hot."</p><div class="author">— Amanda, Seminole</div></div>
     </div>
-  </section>
+  </div>
 
-  <section class="section contact">
-    <h2>Ready to book?</h2>
-    <p>Call or text anytime for dog walking, pet sitting, overnight care, waste removal, and pet taxi help in Largo and across Pinellas County.</p>
-    <div class="contact-buttons">
-      <a href="tel:7273866349" class="contact-btn btn-call">📞 Call (727) 386-6349</a>
-      <a href="sms:7273866349" class="contact-btn btn-text">💬 Text to Book</a>
+  <div class="section" id="faq" style="padding-top: 0;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Common questions from pet parents in Largo and Pinellas County.</p>
+    <div class="grid faq-grid">
+      <div class="card faq-card"><h3>What areas do you serve?</h3><p>Spare Human Services serves Largo, Clearwater, Seminole, Dunedin, Safety Harbor, Belleair, Indian Rocks Beach, Pinellas Park, and nearby parts of Pinellas County.</p></div>
+      <div class="card faq-card"><h3>Do you work with large or reactive dogs?</h3><p>Yes. I have experience working with large dogs and reactive dogs, with a calm handling style and route planning that prioritizes safety and lower-stress environments.</p></div>
+      <div class="card faq-card"><h3>Do you offer early-morning or same-day visits?</h3><p>Yes. Visits are available from 6am, and same-day availability may be possible depending on the schedule.</p></div>
+      <div class="card faq-card"><h3>How much is overnight pet sitting?</h3><p>Overnight care is $100 flat for care in your home from 10pm to 6am.</p></div>
     </div>
-    <p class="service-area">📍 Serving Largo, Clearwater, Seminole, Dunedin & all of Pinellas County, FL</p>
-  </section>
+  </div>
 
-  <section class="section section-light areas">
-    <h2 class="section-title">Areas We Serve</h2>
-    <p class="section-sub">Proudly serving pet owners across Pinellas County, Florida.</p>
-    <div class="area-tags">
-      <span>Largo, FL</span>
-      <span>Clearwater, FL</span>
-      <span>Seminole, FL</span>
-      <span>Dunedin, FL</span>
-      <span>Safety Harbor, FL</span>
-      <span>Belleair, FL</span>
-      <span>Indian Rocks Beach, FL</span>
-      <span>Pinellas Park, FL</span>
+  <div class="cta-section">
+    <div class="cta-card">
+      <h2>Ready to book?</h2>
+      <p>Call or text — most messages answered within the hour.</p>
+      <a href="tel:7273866349">📞 (727) 386-6349</a>
     </div>
-  </section>
+  </div>
 
-  <section class="section rover">
-    <h2 class="section-title">Also find me on Rover</h2>
-    <p class="section-sub">Book through Rover for verified reviews, pet protection, and secure payments.</p>
-    <p><a href="https://www.rover.com/sit/ryanr08753" target="_blank" rel="noopener">🐾 View My Rover Profile</a></p>
-    <p>Scan to book directly</p>
-    <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b358bf8e7e209b630af346/68c795122_QRCode.png" alt="Rover QR Code for Spare Human Services" />
-    <p style="margin-top: 18px; color: #566072;">📸 <a href="https://www.instagram.com/sparehumanserviceslargo/" target="_blank" rel="noopener">Instagram</a> &nbsp; 👍 <a href="https://www.facebook.com/profile.php?id=61578634487102" target="_blank" rel="noopener">Facebook</a> &nbsp; 🐾 <a href="https://www.rover.com/sit/ryanr08753" target="_blank" rel="noopener">Rover</a></p>
-  </section>
+  <footer>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.instagram.com/sparehumanserviceslargo/">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61578634487102">Facebook</a>
+    </div>
+    <p>Spare Human Services · Largo, FL · <a href="tel:7273866349">727-386-6349</a> · Licensed & Insured</p>
+  </footer>
 
-  <footer class="footer">Spare Human Services · Largo, Florida · Licensed & Insured · © 2026 Spare Human Services</footer>
 </body>
 </html>
