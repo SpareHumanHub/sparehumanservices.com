@@ -183,6 +183,12 @@
     .card .price { display: inline-block; background: rgba(94,234,212,0.1); color: #5eead4; padding: 5px 14px; border-radius: 100px; font-size: 0.82rem; font-weight: 700; }
     .card a { color: #5eead4; font-weight: 700; font-size: 0.9rem; }
 
+    /* Neighborhood deal tile — high-contrast bordered gradient */
+    .card-neighborhood { position: relative; background: linear-gradient(135deg, rgba(94,234,212,0.14), rgba(15,52,96,0.4)); border: 1.5px solid rgba(94,234,212,0.6); }
+    .card-neighborhood:hover { border-color: #5eead4; background: linear-gradient(135deg, rgba(94,234,212,0.18), rgba(15,52,96,0.45)); }
+    .card-neighborhood .local-badge { position: absolute; top: 20px; right: 20px; background: linear-gradient(90deg,#5eead4,#22d3ee); border: 1.5px solid #5eead4; color: #0a1628; padding: 5px 14px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.3px; }
+    .card-neighborhood .price { background: rgba(94,234,212,0.18); border: 1.5px solid #5eead4; color: #5eead4; }
+
     /* Blog cards with thumbnails */
     .blog-card { overflow: hidden; padding: 0; }
     .blog-card .thumb-link { display: block; }
@@ -281,6 +287,7 @@
     <h2 class="section-title">Services</h2>
     <p class="section-sub">Practical pet care built around your schedule and your pet's needs.</p>
     <div class="grid services-grid">
+      <div class="card card-neighborhood"><span class="local-badge">🏡 LOCAL DEAL</span><div class="card-icon">📍</div><h3>Neighborhood Discount</h3><p>Live close to my home in Largo? Ask if you're in my service neighborhood — you may qualify for exclusive discounted rates on walks, drop-ins, sitting, and overnight care.</p><span class="price">Ask If You're In The Neighborhood</span></div>
       <div class="card"><div class="card-icon">🦮</div><h3>Dog Walking</h3><p>Solo walks with GPS tracking, calm handling, and a photo update every time. Early morning slots from 6am.</p><span class="price">30 min $18 · 60 min $33</span></div>
       <div class="card"><div class="card-icon">🛋️</div><h3>Drop-In Visits</h3><p>Quick check-ins for feeding, potty breaks, medication reminders, and attention.</p><span class="price">15 min $16 · 30 min $24</span></div>
 
