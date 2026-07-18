@@ -154,7 +154,12 @@
     function loadCal(btn, link) {
       document.querySelectorAll('.quick-pick').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
-      document.getElementById('my-cal-inline').innerHTML = '';
+      // Fully replace the container div with a fresh one — Cal.com's inline embed
+      // does not cleanly re-target the same DOM node for a different calLink.
+      var old = document.getElementById('my-cal-inline');
+      var fresh = document.createElement('div');
+      fresh.id = 'my-cal-inline';
+      old.parentNode.replaceChild(fresh, old);
       Cal("inline", {
         elementOrSelector: "#my-cal-inline",
         calLink: link,
