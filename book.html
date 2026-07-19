@@ -155,29 +155,33 @@
     <p>Spare Human Services · Largo, FL · <a href="tel:7273866349">727-386-6349</a> · <a href="mailto:ryan@sparehumanservices.com">ryan@sparehumanservices.com</a> · Licensed &amp; Insured</p>
   </footer>
 
-  <!-- Cal.com iframe auto-resize via postMessage -->
+  <!-- Cal.com official embed.js -->
+  <script type="text/javascript" src="https://app.cal.com/embed/embed.js" async></script>
   <script>
-    window.addEventListener('message', function(e) {
-      var data = e.data;
-      if (data && typeof data === 'object') {
-        // Cal.com sends various resize signals
-        var h = data.height || (data.data && data.data.height) || (data.__type === 'cal:resize' && data.height);
-        if (!h && data.action && data.action.includes('resize')) h = data.height;
-        if (!h && data.type === 'cal-sync-form') return;
-        if (h && h > 400) {
-          document.getElementById('cal-iframe').style.height = (parseInt(h) + 40) + 'px';
-        }
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      Cal('init', { origin: 'https://cal.com' });
+      Cal('inline', {
+        elementOrSelector: '#my-cal-inline',
+        calLink: 'spare-human',
+        config: { layout: 'column_view', theme: 'dark' }
+      });
     });
-  </script>
 
-  <!-- Cal.com direct iframe embed -->
-  <script>
     function loadCal(btn, link) {
       document.querySelectorAll('.quick-pick').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
-      var iframe = document.getElementById('cal-iframe');
-      iframe.src = 'https://cal.com/' + link + '?embed=true&layout=column_view&theme=dark';
+      // Destroy and recreate the container so Cal.com re-renders cleanly
+      var old = document.getElementById('my-cal-inline');
+      var fresh = document.createElement('div');
+      fresh.id = 'my-cal-inline';
+      fresh.style.width = '100%';
+      fresh.style.minHeight = '600px';
+      old.parentNode.replaceChild(fresh, old);
+      Cal('inline', {
+        elementOrSelector: '#my-cal-inline',
+        calLink: link,
+        config: { layout: 'column_view', theme: 'dark' }
+      });
     }
   </script>
 
