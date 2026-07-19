@@ -62,8 +62,8 @@
     /* Booking card */
     .booking-wrap { max-width: 1000px; margin: 32px auto 0; padding: 0 24px 80px; }
     .booking-card { background: rgba(94,234,212,0.04); border: 1px solid rgba(94,234,212,0.12); border-radius: 24px; padding: 8px; overflow: visible; }
-    #my-cal-inline { width: 100%; min-height: 600px; border-radius: 18px; }
-    @media (max-width: 768px) { #my-cal-inline { min-height: 800px; } }
+    #cal-iframe { width: 100%; height: 1200px; border: none; border-radius: 18px; background: transparent; }
+    @media (max-width: 768px) { #cal-iframe { height: 1300px; } }
 
     .fallback-note { text-align: center; margin-top: 20px; font-size: 0.88rem; color: #6b829e; }
     .fallback-note a { color: #5eead4; font-weight: 700; }
@@ -129,7 +129,7 @@
 
   <div class="booking-wrap">
     <div class="booking-card">
-      <div id="my-cal-inline" style="width:100%; min-height:600px;"></div>
+      <iframe id="cal-iframe" src="https://cal.com/spare-human?embed=true&layout=column_view&theme=dark" loading="lazy" title="Book a service with Spare Human Services" scrolling="yes" allowtransparency="true"></iframe>
     </div>
     <p class="fallback-note">Booking about In-Home Sitting, Overnight Care, Obedience, Emergency/Holiday Care, or a Special Event? Grab a free 15-min consultation above, or just <a href="tel:7273866349">call/text (727) 386-6349</a>.</p>
   </div>
@@ -155,30 +155,13 @@
     <p>Spare Human Services · Largo, FL · <a href="tel:7273866349">727-386-6349</a> · <a href="mailto:ryan@sparehumanservices.com">ryan@sparehumanservices.com</a> · Licensed &amp; Insured</p>
   </footer>
 
-  <!-- Cal.com official embed.js -->
-  <script type="text/javascript" src="https://app.cal.com/embed/embed.js" async></script>
+  <!-- Cal.com direct iframe embed -->
   <script>
-    Cal('init', { origin: 'https://cal.com' });
-    Cal('inline', {
-      elementOrSelector: '#my-cal-inline',
-      calLink: 'spare-human',
-      config: { layout: 'column_view', theme: 'dark' }
-    });
-
     function loadCal(btn, link) {
       document.querySelectorAll('.quick-pick').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
-      var old = document.getElementById('my-cal-inline');
-      var fresh = document.createElement('div');
-      fresh.id = 'my-cal-inline';
-      fresh.style.width = '100%';
-      fresh.style.minHeight = '600px';
-      old.parentNode.replaceChild(fresh, old);
-      Cal('inline', {
-        elementOrSelector: '#my-cal-inline',
-        calLink: link,
-        config: { layout: 'column_view', theme: 'dark' }
-      });
+      var iframe = document.getElementById('cal-iframe');
+      iframe.src = 'https://cal.com/' + link + '?embed=true&layout=column_view&theme=dark';
     }
   </script>
 
