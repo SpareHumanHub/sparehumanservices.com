@@ -158,19 +158,16 @@
   <!-- Cal.com official embed.js -->
   <script type="text/javascript" src="https://app.cal.com/embed/embed.js" async></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      Cal('init', { origin: 'https://cal.com' });
-      Cal('inline', {
-        elementOrSelector: '#my-cal-inline',
-        calLink: 'spare-human',
-        config: { layout: 'column_view', theme: 'dark' }
-      });
+    Cal('init', { origin: 'https://cal.com' });
+    Cal('inline', {
+      elementOrSelector: '#my-cal-inline',
+      calLink: 'spare-human',
+      config: { layout: 'column_view', theme: 'dark' }
     });
 
     function loadCal(btn, link) {
       document.querySelectorAll('.quick-pick').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
-      // Destroy and recreate the container so Cal.com re-renders cleanly
       var old = document.getElementById('my-cal-inline');
       var fresh = document.createElement('div');
       fresh.id = 'my-cal-inline';
