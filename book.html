@@ -116,22 +116,25 @@
     <div class="page-badge">🗓️ Instant Online Booking</div>
     <h1>Book Your <span class="teal">Walk or Visit</span> in 60 Seconds</h1>
     <p>Pick a service, choose a time that works for you, and you're booked — no phone tag, instant confirmation straight to your calendar.</p>
+    <div style="max-width: 600px; margin: 20px auto 0; padding: 14px 20px; background: rgba(94,234,212,0.1); border: 1px solid rgba(94,234,212,0.3); border-radius: 12px; text-align: center;">
+      <p style="color: #5eead4; font-size: 0.9rem; font-weight: 600; margin: 0;">🤝 New client? Please book the free 15-min <strong style="color: #5eead4;">New Client Consultation</strong> first — it's required before your first service booking.</p>
+    </div>
   </div>
 
   <div class="quick-picks">
+    <button class="quick-pick" data-link="spare-human/new-client-consultation" onclick="loadCal(this,'spare-human/new-client-consultation')" style="border-color: #5eead4; color: #5eead4; background: rgba(94,234,212,0.1);">✨ New Client? Start Here — Free Meet &amp; Greet</button>
     <button class="quick-pick active" data-link="spare-human" onclick="loadCal(this,'spare-human')">All Services</button>
     <button class="quick-pick" data-link="spare-human/dog-walking-30-min" onclick="loadCal(this,'spare-human/dog-walking-30-min')">Dog Walking – 30 min</button>
     <button class="quick-pick" data-link="spare-human/dog-walking-60-min" onclick="loadCal(this,'spare-human/dog-walking-60-min')">Dog Walking – 60 min</button>
     <button class="quick-pick" data-link="spare-human/drop-in-visit-15-min" onclick="loadCal(this,'spare-human/drop-in-visit-15-min')">Drop-In – 15 min</button>
     <button class="quick-pick" data-link="spare-human/drop-in-visit-30-min" onclick="loadCal(this,'spare-human/drop-in-visit-30-min')">Drop-In – 30 min</button>
-    <button class="quick-pick" data-link="spare-human/new-client-consultation" onclick="loadCal(this,'spare-human/new-client-consultation')">New Client Consultation</button>
   </div>
 
   <div class="booking-wrap">
     <div class="booking-card">
       <iframe id="cal-iframe" src="https://cal.com/spare-human?embed=true&layout=column_view&theme=dark" loading="lazy" title="Book a service with Spare Human Services" scrolling="yes" allowtransparency="true"></iframe>
     </div>
-    <p class="fallback-note">Booking about In-Home Sitting, Overnight Care, Obedience, Emergency/Holiday Care, or a Special Event? Grab a free 15-min consultation above, or just <a href="tel:7273866349">call/text (727) 386-6349</a>.</p>
+    <p class="fallback-note">New clients must complete a free 15-min consultation before booking services. Booking In-Home Sitting, Overnight Care, Obedience, Emergency/Holiday Care, or a Special Event? Grab a consultation above, or <a href="tel:7273866349">call/text (727) 386-6349</a>.</p>
   </div>
 
   <div class="trust-strip">
