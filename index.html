@@ -321,8 +321,11 @@
   </div>
 
   <div class="hero">
-    <img class="hero-bg" src="/banner.jpg" alt="Spare Human Services dog walking and pet sitting in Largo, FL" />
+    <div class="hero-slides">
+      <img class="hero-slide active" src="/banners/banner-1.jpg" alt="Happy client dog enjoying a walk in Largo, FL" />
+    </div>
     <div class="hero-overlay"></div>
+    <div class="hero-dots" id="hero-dots"></div>
     <div class="hero-content">
       <div class="hero-badge">🛡️ Licensed & Insured</div>
       <h1>Dog Walking & Pet Sitting in <span class="teal">Largo, FL</span></h1>
@@ -469,5 +472,53 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+  <script>
+    // Hero banner carousel — add new client dog photos to the banners array
+    const heroBanners = [
+      { src: "/banners/banner-1.jpg", alt: "Happy client dog enjoying a walk in Largo, FL" }
+      // Add more client photos here:
+      // { src: "/banners/banner-2.jpg", alt: "Client dog Buster on his morning walk" },
+      // { src: "/banners/banner-3.jpg", alt: "Client dog Bella at the park" },
+    ];
+
+    if (heroBanners.length > 1) {
+      const slidesContainer = document.querySelector('.hero-slides');
+      const dotsContainer = document.getElementById('hero-dots');
+      let currentSlide = 0;
+
+      // Create additional slides
+      heroBanners.forEach((banner, i) => {
+        if (i > 0) {
+          const img = document.createElement('img');
+          img.className = 'hero-slide';
+          img.src = banner.src;
+          img.alt = banner.alt;
+          slidesContainer.appendChild(img);
+        }
+        const dot = document.createElement('div');
+        dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+
+      function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+
+      function nextSlide() {
+        goToSlide((currentSlide + 1) % heroBanners.length);
+      }
+
+      // Auto-rotate every 6 seconds
+      setInterval(nextSlide, 6000);
+    }
+  </script>
 </body>
 </html>
