@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LPSWZJV8T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2LPSWZJV8T');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Intake Form — Spare Human Services</title>
+  <meta name="description" content="New client intake form for Spare Human Services. Tell us about you and your pet so we can provide the best care possible." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://sparehumanservices.com/intake.html" />
+  <link rel="icon" href="/logo.jpg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sparehumanservices.com/intake.html" />
+  <meta property="og:title" content="Client Intake Form | Spare Human Services" />
+  <meta property="og:description" content="Tell us about you and your pet so we can provide the best care possible." />
+  <meta property="og:image" content="https://media.base44.com/images/public/69b358bf8e7e209b630af346/ce840434c_ColorLogo.jpg" />
+  <meta property="og:site_name" content="Spare Human Services" />
+  <meta property="og:locale" content="en_US" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background: #0a1628; color: #e8eef5; }
+    a { text-decoration: none; color: inherit; }
+    .nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(10,22,40,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(94,234,212,0.12); }
+    .nav { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 800; font-size: 1.25rem; color: #5eead4; display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.88rem; font-weight: 600; color: #8ba3c0; }
+    .nav-links a:hover { color: #5eead4; }
+    .nav-phone { background: #5eead4; color: #0a1628; padding: 10px 22px; border-radius: 100px; font-weight: 800; font-size: 0.88rem; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .page-header { max-width: 700px; margin: 0 auto; padding: 56px 24px 32px; text-align: center; }
+    .page-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 8px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-bottom: 20px; }
+    .page-header h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 14px; }
+    .page-header h1 .teal { color: #5eead4; }
+    .page-header p { font-size: 1.05rem; color: #8ba3c0; line-height: 1.6; }
+    .form-wrap { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+    .form-card { background: rgba(94,234,212,0.04); border: 1px solid rgba(94,234,212,0.12); border-radius: 24px; padding: 40px; }
+    @media (max-width: 640px) { .form-card { padding: 24px 20px; } }
+    .form-section { margin-bottom: 36px; }
+    .form-section:last-child { margin-bottom: 0; }
+    .form-section h2 { font-size: 1.15rem; font-weight: 700; color: #5eead4; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .form-section .section-desc { font-size: 0.88rem; color: #6b829e; margin-bottom: 20px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 0.86rem; font-weight: 600; color: #c8d6e5; }
+    .form-group label .req { color: #5eead4; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+      padding: 12px 16px; color: #e8eef5; font-size: 0.92rem; font-family: inherit; transition: border-color 0.15s, background 0.15s; outline: none;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #4a6080; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #5eead4; background: rgba(94,234,212,0.06); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select { cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235eead4' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+    }
+    .form-group select option { background: #0a1628; color: #e8eef5; }
+    .submit-btn { width: 100%; background: #5eead4; color: #0a1628; border: none; border-radius: 100px; padding: 16px 32px; font-size: 1rem; font-weight: 800; font-family: inherit; cursor: pointer; transition: transform 0.1s, box-shadow 0.2s; margin-top: 8px; }
+    .submit-btn:hover { box-shadow: 0 0 24px rgba(94,234,212,0.3); transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .form-msg { display: none; padding: 16px 20px; border-radius: 12px; font-size: 0.92rem; font-weight: 600; margin-bottom: 20px; text-align: center; }
+    .form-msg.success { display: block; background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; }
+    .form-msg.error { display: block; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #f87171; }
+    .trust-strip { max-width: 800px; margin: 0 auto; padding: 0 24px 60px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .trust-pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 100px; font-size: 0.82rem; font-weight: 600; color: #c8d6e5; }
+    .trust-pill span { color: #5eead4; }
+    footer { max-width: 1200px; margin: 0 auto; padding: 48px 24px 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer-links a { font-size: 0.85rem; color: #8ba3c0; font-weight: 600; }
+    .footer-links a:hover { color: #5eead4; }
+    footer p { font-size: 0.85rem; color: #6b829e; }
+    footer p a { color: #8ba3c0; }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="nav">
+      <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Spare Human Services" style="height:44px;width:44px;object-fit:contain;border-radius:8px;background:white;padding:3px;" /> Spare Human Services</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+      <a class="nav-phone" href="/book.html">Book Now</a>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="page-badge">📋 New Client Intake</div>
+    <h1>Tell Us About <span class="teal">You & Your Pet</span></h1>
+    <p>Fill this out after your meet &amp; greet so I have everything I need to give your pet the best care possible. Takes about 3 minutes.</p>
+  </div>
+
+  <div class="trust-strip">
+    <div class="trust-pill"><span>🔒</span> Your info is private &amp; secure</div>
+    <div class="trust-pill"><span>✓</span> Licensed &amp; Insured</div>
+    <div class="trust-pill"><span>✓</span> Pet First Aid Certified</div>
+  </div>
+
+  <div class="form-wrap">
+    <div id="form-msg" class="form-msg"></div>
+    <form id="intake-form" class="form-card">
+      <div class="form-section">
+        <h2>👤 Owner Information</h2>
+        <p class="section-desc">Your contact details so I can reach you.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="owner_name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label>Phone <span class="req">*</span></label>
+            <input type="tel" name="phone" required placeholder="(727) 555-1234" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="jane@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Neighborhood</label>
+            <input type="text" name="neighborhood" placeholder="e.g. Belmar, Largo" />
+          </div>
+          <div class="form-group full">
+            <label>Home Address</label>
+            <input type="text" name="address" placeholder="123 Main St, Largo, FL 33770" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>🆘 Emergency Contact</h2>
+        <p class="section-desc">Someone I can reach if I can't get hold of you during a visit.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Emergency Contact Name</label>
+            <input type="text" name="emergency_contact_name" placeholder="e.g. spouse, family member" />
+          </div>
+          <div class="form-group">
+            <label>Emergency Contact Phone</label>
+            <input type="tel" name="emergency_contact_phone" placeholder="(727) 555-5678" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>🐾 Pet Information</h2>
+        <p class="section-desc">Tell me about your pet so I know how to care for them.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Pet Name</label>
+            <input type="text" name="pet_name" placeholder="Buster" />
+          </div>
+          <div class="form-group">
+            <label>Species</label>
+            <select name="species">
+              <option value="">Select...</option>
+              <option value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
+              <option value="Bird">Bird</option>
+              <option value="Rabbit">Rabbit</option>
+              <option value="Reptile">Reptile</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Breed</label>
+            <input type="text" name="breed" placeholder="e.g. Labrador Retriever" />
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text" name="age" placeholder="e.g. 4 years" />
+          </div>
+          <div class="form-group">
+            <label>Weight</label>
+            <input type="text" name="weight" placeholder="e.g. 65 lbs" />
+          </div>
+          <div class="form-group">
+            <label>Temperament</label>
+            <input type="text" name="temperament" placeholder="e.g. friendly, shy, reactive" />
+          </div>
+          <div class="form-group full">
+            <label>Allergies</label>
+            <input type="text" name="allergies" placeholder="e.g. chicken, certain grasses" />
+          </div>
+          <div class="form-group full">
+            <label>Favorite Treats</label>
+            <input type="text" name="favorite_treats" placeholder="e.g. peanut butter, cheese" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>📅 Routine &amp; Care</h2>
+        <p class="section-desc">The more detail you share, the better I can match your pet's routine.</p>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Feeding Instructions</label>
+            <textarea name="feeding_instructions" placeholder="e.g. 1 cup dry food morning and evening"></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Walk Routine</label>
+            <textarea name="walk_routine" placeholder="e.g. 30 min morning walk, prefers quiet streets"></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Medication Schedule</label>
+            <textarea name="medication_schedule" placeholder="e.g. Apoquel 1 pill AM with food"></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Medical Notes</label>
+            <textarea name="medical_notes" placeholder="e.g. hip dysplasia — avoid long runs"></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Behavioral Notes</label>
+            <textarea name="behavioral_notes" placeholder="e.g. crate-trained, afraid of thunderstorms"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>🏥 Veterinarian Info</h2>
+        <p class="section-desc">In case of emergency, I need to know who your vet is.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Vet Clinic Name</label>
+            <input type="text" name="vet_clinic_name" placeholder="e.g. Largo Veterinary Hospital" />
+          </div>
+          <div class="form-group">
+            <label>Vet Phone</label>
+            <input type="tel" name="vet_phone" placeholder="(727) 555-9090" />
+          </div>
+          <div class="form-group full">
+            <label>Vet Address</label>
+            <input type="text" name="vet_address" placeholder="e.g. 456 Bay Dr, Largo, FL 33770" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>📝 Anything Else?</h2>
+        <p class="section-desc">Quirks, preferences, or details that don't fit anywhere else.</p>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Additional Notes</label>
+            <textarea name="notes" placeholder="e.g. Buster knows hand signals, don't let him eat sticks"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">Submit Intake Form →</button>
+    </form>
+  </div>
+
+  <footer>
+    <img src="/logo.jpg" alt="Spare Human Services" style="height:56px;width:56px;object-fit:contain;border-radius:10px;background:white;padding:4px;margin:0 auto 16px;display:block;" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/book.html">Book Now</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <p>Spare Human Services · Largo, FL · <a href="tel:7273866349">727-386-6349</a> · <a href="mailto:ryan@sparehumanservices.com">ryan@sparehumanservices.com</a> · Licensed &amp; Insured</p>
+  </footer>
+
+  <script>
+    const API_URL = 'https://spare-human-630af346.base44.app/functions/handleClientIntake';
+    const form = document.getElementById('intake-form');
+    const msgEl = document.getElementById('form-msg');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      msgEl.className = 'form-msg';
+      msgEl.innerHTML = '';
+
+      const formData = new FormData(form);
+      const data = {};
+      for (const [key, value] of formData.entries()) {
+        data[key] = value.trim();
+      }
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          msgEl.className = 'form-msg success';
+          msgEl.innerHTML = '✅ ' + result.message + ' Ryan will review your info and reach out soon.';
+          form.style.display = 'none';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          msgEl.className = 'form-msg error';
+          msgEl.innerHTML = '⚠️ ' + result.message;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Intake Form →';
+        }
+      } catch (err) {
+        msgEl.className = 'form-msg error';
+        msgEl.innerHTML = '⚠️ Could not submit. Please call or text (727) 386-6349.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Intake Form →';
+      }
+    });
+  </script>
+</body>
+</html>
