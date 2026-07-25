@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LPSWZJV8T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2LPSWZJV8T');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Share Your Feedback | Spare Human Services</title>
+  <meta name="description" content="Share your experience with Spare Human Services. We value your feedback." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://sparehumanservices.com/review.html" />
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background: #0a1628; color: #e8eef5; min-height: 100vh; }
+
+    /* Nav */
+    .nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(10,22,40,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(94,234,212,0.12); }
+    .nav { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 800; font-size: 1.25rem; color: #5eead4; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 0.88rem; font-weight: 600; color: #8ba3c0; text-decoration: none; }
+    .nav-links a:hover { color: #5eead4; }
+    .nav-phone { background: #5eead4; color: #0a1628; padding: 10px 22px; border-radius: 100px; font-weight: 800; font-size: 0.88rem; text-decoration: none; }
+
+    /* Hero */
+    .review-hero { text-align: center; padding: 80px 24px 40px; max-width: 700px; margin: 0 auto; }
+    .review-hero h1 { font-size: 2.4rem; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    .review-hero h1 .accent { color: #5eead4; }
+    .review-hero p { font-size: 1.1rem; color: #8ba3c0; line-height: 1.6; }
+
+    /* Rating buttons */
+    .rating-section { max-width: 600px; margin: 0 auto; padding: 20px 24px 60px; }
+    .rating-question { text-align: center; font-size: 1.25rem; font-weight: 700; margin-bottom: 32px; color: #e8eef5; }
+
+    .rating-buttons { display: flex; flex-direction: column; gap: 16px; }
+    .rating-btn {
+      display: flex; align-items: center; gap: 14px;
+      padding: 20px 28px; border-radius: 16px;
+      font-size: 1.05rem; font-weight: 700;
+      cursor: pointer; border: 2px solid rgba(94,234,212,0.15);
+      background: rgba(255,255,255,0.03); color: #e8eef5;
+      transition: all 0.25s ease; text-align: left; width: 100%;
+      font-family: inherit;
+    }
+    .rating-btn:hover { border-color: #5eead4; background: rgba(94,234,212,0.06); transform: translateY(-2px); }
+    .rating-btn .emoji { font-size: 1.6rem; line-height: 1; }
+    .rating-btn .label-wrap { display: flex; flex-direction: column; gap: 2px; }
+    .rating-btn .sublabel { font-size: 0.82rem; font-weight: 500; color: #8ba3c0; }
+    .rating-btn.positive:hover { border-color: #5eead4; }
+    .rating-btn.negative:hover { border-color: #f87171; background: rgba(248,113,113,0.06); }
+
+    /* Happy path */
+    .thank-you-card {
+      max-width: 540px; margin: 0 auto; padding: 24px;
+      background: rgba(94,234,212,0.04); border: 1px solid rgba(94,234,212,0.15);
+      border-radius: 20px; text-align: center;
+    }
+    .thank-you-card .check-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(94,234,212,0.12); display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px; font-size: 2rem;
+    }
+    .thank-you-card h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+    .thank-you-card p { color: #8ba3c0; line-height: 1.6; margin-bottom: 24px; }
+    .google-review-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #5eead4; color: #0a1628;
+      padding: 16px 36px; border-radius: 100px;
+      font-size: 1.1rem; font-weight: 800; text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .google-review-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(94,234,212,0.3); }
+    .google-review-btn svg { width: 22px; height: 22px; }
+
+    /* Feedback form (unhappy path) */
+    .feedback-card {
+      max-width: 540px; margin: 0 auto; padding: 24px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(248,113,113,0.2);
+      border-radius: 20px;
+    }
+    .feedback-card h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+    .feedback-card .intro { color: #8ba3c0; line-height: 1.6; margin-bottom: 24px; font-size: 0.95rem; }
+    .feedback-card .contact-prompt {
+      background: rgba(94,234,212,0.06); border: 1px solid rgba(94,234,212,0.15);
+      border-radius: 12px; padding: 16px; margin-bottom: 24px;
+    }
+    .feedback-card .contact-prompt .label { font-size: 0.82rem; font-weight: 700; color: #5eead4; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .feedback-card .contact-prompt a { color: #e8eef5; text-decoration: none; font-weight: 700; }
+    .feedback-card .contact-prompt a:hover { color: #5eead4; }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #8ba3c0; margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04);
+      color: #e8eef5; font-size: 0.95rem; font-family: inherit;
+      transition: border-color 0.2s ease;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none; border-color: #5eead4;
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-group select option { background: #0a1628; }
+
+    .submit-btn {
+      width: 100%; padding: 14px; border-radius: 100px;
+      background: #5eead4; color: #0a1628; border: none;
+      font-size: 1rem; font-weight: 800; cursor: pointer;
+      font-family: inherit; transition: all 0.2s ease;
+    }
+    .submit-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(94,234,212,0.25); }
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-success {
+      text-align: center; padding: 32px;
+    }
+    .form-success .check-circle {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(94,234,212,0.12); display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 16px; font-size: 1.6rem;
+    }
+    .form-success h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+    .form-success p { color: #8ba3c0; line-height: 1.6; }
+
+    /* Footer */
+    .footer { text-align: center; padding: 40px 24px; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 60px; }
+    .footer a { color: #5eead4; text-decoration: none; font-weight: 600; }
+    .footer p { color: #5a6e87; font-size: 0.85rem; margin-top: 8px; }
+
+    /* Animations */
+    .fade-in { animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .review-hero h1 { font-size: 1.8rem; }
+      .review-hero { padding: 50px 20px 24px; }
+      .rating-btn { padding: 16px 20px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <div class="nav-wrap">
+    <div class="nav">
+      <a href="/" class="nav-logo">
+        <img src="/logo.jpg" alt="Spare Human Services" style="height:44px;width:44px;object-fit:contain;border-radius:8px;background:white;padding:3px;" />
+        Spare Human Services
+      </a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#why-us">Why Us</a>
+        <a href="/#blog">Blog</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/intake.html" style="color:#5eead4;">New Clients</a>
+        <a class="nav-phone" href="/book.html" style="background:transparent;border:1px solid #5eead4;color:#5eead4;">Book Now</a>
+        <a class="nav-phone" href="tel:7273866349">(727) 386-6349</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="review-hero">
+    <h1>How was your <span class="accent">experience?</span></h1>
+    <p>Your feedback means everything to us. It helps us improve and helps other pet parents find trustworthy care.</p>
+  </div>
+
+  <!-- Rating Section -->
+  <div class="rating-section" id="ratingSection">
+    <div class="rating-question">How would you rate your experience with Spare Human Services?</div>
+    <div class="rating-buttons">
+      <button class="rating-btn positive" onclick="showHappyPath()">
+        <span class="emoji">🐶</span>
+        <div class="label-wrap">
+          <span>Amazing — my pet was in great hands!</span>
+          <span class="sublabel">We'd love to hear from you on Google</span>
+        </div>
+      </button>
+      <button class="rating-btn positive" onclick="showHappyPath()">
+        <span class="emoji">🙂</span>
+        <div class="label-wrap">
+          <span>Good — everything went well</span>
+          <span class="sublabel">A Google review would really help us</span>
+        </div>
+      </button>
+      <button class="rating-btn negative" onclick="showFeedbackForm()">
+        <span class="emoji">😐</span>
+        <div class="label-wrap">
+          <span>It was okay, but I have some feedback</span>
+          <span class="sublabel">We want to hear how we can do better</span>
+        </div>
+      </button>
+      <button class="rating-btn negative" onclick="showFeedbackForm()">
+        <span class="emoji">😟</span>
+        <div class="label-wrap">
+          <span>I had a concern or issue</span>
+          <span class="sublabel">Ryan personally reads every message</span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Happy Path: Google Review -->
+  <div id="happyPath" style="display:none; padding: 0 24px 60px;">
+    <div class="thank-you-card fade-in">
+      <div class="check-circle">🎉</div>
+      <h2>Thank you so much!</h2>
+      <p>We're thrilled your pet had a great experience. A quick Google review helps other pet parents in Largo find reliable, loving care — and it means the world to a small local business.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=spare+human+services+largo+fl" target="_blank" rel="noopener" class="google-review-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Leave a Google Review
+      </a>
+      <p style="margin-top:16px; font-size:0.82rem; color:#5a6e87;">Takes less than 60 seconds · You'll be taken to our Google listing</p>
+    </div>
+  </div>
+
+  <!-- Unhappy Path: Private Feedback Form -->
+  <div id="feedbackForm" style="display:none; padding: 0 24px 60px;">
+    <div class="feedback-card fade-in">
+      <h2>We want to make this right.</h2>
+      <p class="intro">Your feedback goes directly to Ryan — not posted publicly. He personally reads every message and will respond as quickly as possible.</p>
+
+      <div class="contact-prompt">
+        <div class="label">Prefer to talk directly?</div>
+        <a href="tel:7273866349">📞 (727) 386-6349</a> · <a href="sms:7273866349">Text Ryan</a> · <a href="mailto:ryan@sparehumanservices.com">Email</a>
+      </div>
+
+      <form id="feedbackFormEl" onsubmit="submitFeedback(event)">
+        <div class="form-group">
+          <label for="fName">Your Name</label>
+          <input type="text" id="fName" name="name" required placeholder="Jane Doe" />
+        </div>
+        <div class="form-group">
+          <label for="fContact">Phone or Email (so Ryan can follow up)</label>
+          <input type="text" id="fContact" name="contact" required placeholder="(727) 555-0123 or you@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="fService">Which service was this about?</label>
+          <select id="fService" name="service">
+            <option value="dog_walking">Dog Walking</option>
+            <option value="drop_in">Drop-In Visit</option>
+            <option value="pet_sitting">In-Home Pet Sitting</option>
+            <option value="overnight">Overnight Care</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fMessage">What happened? What could we do better?</label>
+          <textarea id="fMessage" name="message" required placeholder="Tell us about your experience..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Send Feedback to Ryan</button>
+      </form>
+
+      <div id="formSuccess" style="display:none;">
+        <div class="form-success">
+          <div class="check-circle">✅</div>
+          <h3>Thank you for your honesty.</h3>
+          <p>Your message has been sent directly to Ryan. He'll reach out to you within 24 hours to make things right.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="/">sparehumanservices.com</a>
+    <p>Licensed & Insured · Largo, FL · (727) 386-6349</p>
+  </div>
+
+  <script>
+    function showHappyPath() {
+      document.getElementById('ratingSection').style.display = 'none';
+      document.getElementById('happyPath').style.display = 'block';
+      document.getElementById('feedbackForm').style.display = 'none';
+    }
+
+    function showFeedbackForm() {
+      document.getElementById('ratingSection').style.display = 'none';
+      document.getElementById('happyPath').style.display = 'none';
+      document.getElementById('feedbackForm').style.display = 'block';
+    }
+
+    async function submitFeedback(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      const data = {
+        name: document.getElementById('fName').value,
+        contact: document.getElementById('fContact').value,
+        service: document.getElementById('fService').value,
+        message: document.getElementById('fMessage').value
+      };
+
+      try {
+        const res = await fetch('https://spare-human-630af346.base44.app/functions/handleReviewFeedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!res.ok) throw new Error('Failed to submit');
+
+        document.getElementById('feedbackFormEl').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Try Again';
+        alert('Something went wrong. Please call or text Ryan directly at (727) 386-6349.');
+      }
+    }
+  </script>
+
+</body>
+</html>
