@@ -65,7 +65,19 @@
     footer { background: #050d1a; border-top: 1px solid rgba(255,255,255,0.06); color: #5a6f8a; text-align: center; padding: 32px 20px; font-size: 0.85rem; }
     footer a { color: #5eead4; }
 
-    @media (max-width: 768px) { .nav-links { display: none; } }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+        background: #0a1628; flex-direction: column; padding: 80px 24px 24px;
+        gap: 20px; transition: right 0.3s ease; z-index: 1000;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.5); overflow-y: auto; display: flex !important;
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1.05rem; padding: 8px 0; }
+      .nav-links a:hover { color: #5eead4; }
+      .nav-phone { font-size: 0.85rem; padding: 8px 16px; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -91,6 +103,7 @@
   <div class="nav-wrap">
     <div class="nav">
       <div class="nav-logo"><img src="/logo.jpg" alt="Spare Human Services" style="height:36px;width:36px;object-fit:contain;border-radius:6px;background:white;padding:2px;" /> Spare Human Services</div>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="/#services">Services</a>
         <a href="/#why">Why Us</a>
@@ -167,6 +180,31 @@ s0.parentNode.insertBefore(s1,s0);
   </style>
 
   <a href="/book.html" class="floating-book-btn" style="position:fixed;bottom:20px;left:20px;z-index:999;background:#5eead4;color:#0a1628;padding:14px 24px;border-radius:100px;font-weight:800;font-size:0.95rem;text-decoration:none;box-shadow:0 8px 24px rgba(94,234,212,0.4);display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">🗓️ Book Now</a>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+  if (!hamburger || !navLinks) return;
+  var overlay = document.createElement('div');
+  overlay.className = 'mobile-overlay';
+  document.body.appendChild(overlay);
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+    overlay.classList.toggle('show');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('open')) toggleMenu();
+    });
+  });
+});
+</script>
 
 </body>
 </html>

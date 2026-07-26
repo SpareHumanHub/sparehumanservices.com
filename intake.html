@@ -39,7 +39,19 @@
     .nav-links a { font-size: 0.88rem; font-weight: 600; color: #8ba3c0; }
     .nav-links a:hover { color: #5eead4; }
     .nav-phone { background: #5eead4; color: #0a1628; padding: 10px 22px; border-radius: 100px; font-weight: 800; font-size: 0.88rem; }
-    @media (max-width: 768px) { .nav-links { display: none; } }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+        background: #0a1628; flex-direction: column; padding: 80px 24px 24px;
+        gap: 20px; transition: right 0.3s ease; z-index: 1000;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.5); overflow-y: auto; display: flex !important;
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1.05rem; padding: 8px 0; }
+      .nav-links a:hover { color: #5eead4; }
+      .nav-phone { font-size: 0.85rem; padding: 8px 16px; }
+    }
     .page-header { max-width: 700px; margin: 0 auto; padding: 56px 24px 32px; text-align: center; }
     .page-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 8px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-bottom: 20px; }
     .page-header h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 14px; }
@@ -111,6 +123,7 @@
   <div class="nav-wrap">
     <div class="nav">
       <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Spare Human Services" style="height:44px;width:44px;object-fit:contain;border-radius:8px;background:white;padding:3px;" /> Spare Human Services</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="/#services">Services</a>
         <a href="/#how-it-works">How It Works</a>
@@ -351,5 +364,30 @@
       }
     });
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+  if (!hamburger || !navLinks) return;
+  var overlay = document.createElement('div');
+  overlay.className = 'mobile-overlay';
+  document.body.appendChild(overlay);
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+    overlay.classList.toggle('show');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('open')) toggleMenu();
+    });
+  });
+});
+</script>
+
 </body>
 </html>
