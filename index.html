@@ -444,6 +444,97 @@
     .yt-channel-link a { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,0,0,0.1); border: 1px solid rgba(255,0,0,0.3); color: #fff; padding: 10px 24px; border-radius: 100px; font-weight: 700; font-size: 0.88rem; transition: background 0.2s; }
     .yt-channel-link a:hover { background: rgba(255,0,0,0.2); }
     @media (max-width: 640px) { .yt-card { flex: 0 0 240px; } }
+  
+    /* === VISUAL POLISH (July 2026) === */
+
+    /* Scroll reveal animations */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* Nav scroll effect */
+    .nav-wrap { transition: box-shadow 0.3s ease, background 0.3s ease; }
+    .nav-wrap.scrolled { background: rgba(10,22,40,0.97); box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+
+    /* Section title accent line */
+    .section-title { position: relative; }
+    .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #5eead4, transparent); border-radius: 2px; margin: 12px auto 0; }
+
+    /* Enhanced card glow on hover */
+    .card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .card:hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
+
+    /* Button polish */
+    .hero-cta { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .hero-cta:hover { background: #4dd0c0; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(94,234,212,0.4); }
+    .nav-phone { transition: all 0.25s ease; }
+    .nav-phone:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,234,212,0.25); }
+
+    /* Trust pills subtle glow */
+    .trust-pill { transition: all 0.3s ease; }
+    .trust-pill:hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.25); transform: translateY(-2px); }
+
+    /* Stats bar glow */
+    .stats-inner { transition: box-shadow 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+    .stats-inner:hover { box-shadow: 0 8px 40px rgba(94,234,212,0.1); }
+    .stat .num { transition: transform 0.3s ease; }
+    .stat:hover .num { transform: scale(1.08); }
+
+    /* Review card quote decoration */
+    .review-card { position: relative; }
+    .review-card::before { content: '\201C'; position: absolute; top: 8px; right: 18px; font-size: 4rem; color: rgba(94,234,212,0.08); font-family: Georgia, serif; line-height: 1; pointer-events: none; }
+    .review-card .stars { letter-spacing: 2px; }
+
+    /* YouTube card play overlay */
+    .yt-card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .yt-card:hover { transform: translateY(-6px); border-color: rgba(94,234,212,0.4); box-shadow: 0 12px 40px rgba(94,234,212,0.08); }
+
+    /* Service area cards */
+    .area-card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); cursor: pointer; }
+    .area-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(94,234,212,0.1); }
+    .area-card h3 { transition: color 0.2s; }
+    .area-card:hover h3 { color: #5eead4; }
+
+    /* CTA section polish */
+    .cta-glow { position: relative; overflow: hidden; }
+    .cta-glow::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(94,234,212,0.04) 0%, transparent 60%); animation: ctaPulse 4s ease-in-out infinite; pointer-events: none; }
+    @keyframes ctaPulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
+
+    /* Smooth section transitions */
+    .section { position: relative; }
+    .section + .section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; max-width: 600px; height: 1px; background: linear-gradient(90deg, transparent, rgba(94,234,212,0.15), transparent); }
+
+    /* Hero text shimmer */
+    .hero h1 .teal { background: linear-gradient(135deg, #5eead4, #22d3ee, #5eead4); background-size: 200% auto; animation: shimmer 4s linear infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    /* Badge pulse */
+    .hero-badge { animation: badgePulse 3s ease-in-out infinite; }
+    @keyframes badgePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(94,234,212,0.3); } 50% { box-shadow: 0 0 0 8px rgba(94,234,212,0); } }
+
+    /* Flip card smooth shadow */
+    .flip-card { transition: filter 0.3s; }
+    .flip-card:hover { filter: drop-shadow(0 8px 24px rgba(94,234,212,0.1)); }
+
+    /* Footer polish */
+    .footer-links { transition: color 0.2s; }
+    .footer-links a { transition: all 0.2s ease; }
+    .footer-links a:hover { color: #5eead4; transform: translateY(-1px); }
+
+    /* Scroll behavior */
+    html { scroll-behavior: smooth; }
+    body { scroll-behavior: smooth; }
+
+    /* Responsive polish */
+    @media (max-width: 768px) {
+      .section { padding: 56px 20px; }
+      .section-title { font-size: 1.7rem; }
+      .hero-content { padding: 56px 20px; }
+      .review-card::before { font-size: 3rem; top: 4px; right: 12px; }
+    }
+
   </style>
   <link rel="icon" type="image/jpeg" href="/logo.jpg" />
   <link rel="apple-touch-icon" href="/logo.jpg" />
@@ -496,7 +587,7 @@
     </div>
   </div>
 
-  <div class="stats-bar">
+  <div class="stats-bar reveal">
     <div class="stats-inner">
       <div class="stat"><div class="num">6am</div><div class="label">Earliest availability</div></div>
       <div class="stat"><div class="num">$100</div><div class="label">Overnight flat rate</div></div>
@@ -505,13 +596,13 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section reveal">
     <div class="intro">
       <p>If you need a reliable dog walker or pet sitter in Largo, FL, Spare Human Services offers calm, consistent care built around your pet's routine. I serve Largo, Clearwater, Seminole, Dunedin, and surrounding Pinellas County neighborhoods with dog walking, drop-in visits, in-home pet sitting, overnight care, waste removal, and pet taxi services — with photo updates, GPS-tracked walks, and availability starting at 6am.</p>
     </div>
   </div>
 
-  <div class="section" id="services" style="padding-top: 0;">
+  <div class="section reveal" id="services" style="padding-top: 0;">
     <h2 class="section-title">Services</h2>
     <p class="section-sub">Practical pet care built around your schedule and your pet's needs.</p>
     <div class="grid services-grid">
@@ -535,7 +626,7 @@
     </div>
   </div>
 
-  <div class="section" id="why" style="padding-top: 0;">
+  <div class="section reveal" id="why" style="padding-top: 0;">
     <h2 class="section-title">Why pet parents choose Spare Human</h2>
     <p class="section-sub">The little things that make a big difference for your pet.</p>
     <div class="grid why-grid">
@@ -547,7 +638,7 @@
     </div>
   </div>
 
-  <div class="yt-section" id="youtube">
+  <div class="yt-section reveal" id="youtube">
     <h2 class="section-title">See Spare Human in Action</h2>
     <p class="section-sub">Real walks, real clients, real joy — straight from the streets of Largo.</p>
     <div class="yt-scroll">
@@ -562,7 +653,7 @@
       "https://www.tiktok.com/@sparehumanservices" target="_blank" rel="noopener">▶ Watch more on YouTube</a></div>
   </div>
 
-  <div class="section" style="padding-top: 0;">
+  <div class="section reveal" style="padding-top: 0;">
     <h2 class="section-title">From the Blog</h2>
     <p class="section-sub">Pet safety tips and local guides for Largo and Pinellas County.</p>
     <div class="grid blog-grid">
@@ -587,8 +678,8 @@
 
 
   <!-- My Story teaser -->
-  <div class="section" style="padding-top: 0;">
-    <div style="max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, rgba(94,234,212,0.06), rgba(15,52,96,0.25)); border: 1px solid rgba(94,234,212,0.15); border-radius: 28px; padding: 48px 40px; text-align: center;">
+  <div class="section reveal" style="padding-top: 0;">
+    <div style="max-width: 900px; margin: 0 auto; class="cta-glow" style="background: linear-gradient(135deg, rgba(94,234,212,0.06), rgba(15,52,96,0.25)); border: 1px solid rgba(94,234,212,0.15); border-radius: 28px; padding: 48px 40px; text-align: center;">
       <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 8px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-bottom: 20px;">👋 Meet Your Pet Sitter</div>
       <h2 style="font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: #fff; margin-bottom: 14px; line-height: 1.15;">The Person Behind <span style="color: #5eead4;">Spare Human</span></h2>
       <p style="color: #8ba3c0; font-size: 1.05rem; max-width: 560px; margin: 0 auto 28px; line-height: 1.65;">Over 40 years of animal care. Shelter volunteer. The friend everyone called — who finally made it official. Get to know who's caring for your pet.</p>
@@ -596,14 +687,14 @@
     </div>
   </div>
 
-  <div class="section" id="reviews" style="padding-top: 0;">
+  <div class="section reveal" id="reviews" style="padding-top: 0;">
     <h2 class="section-title">What pet parents say</h2>
     <p class="section-sub">Real reviews from real clients.</p>
     <div class="grid reviews-grid">
-      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"My dog actually looks forward to his services. When I come home from vacation, my dog Vader is so happy. Thank you very much Ryan."</p><div class="author">— David Riposo · Google Business</div></div>
-      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"So grateful to have found someone local I can actually trust with my pets. Highly recommend Spare Human Services!"</p><div class="author">— Facebook Recommendation</div></div>
-      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Ryan did a great job taking care of my puppers while I was out of town for a few days. He was always responsive and ready to answer any of my questions. I will be having him take care of my dogs anytime I need some assistance."</p><div class="author">— Eric P. · Rover · Nov 2023</div></div><div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"We have had great experience using Spare Human Services. Leia looks forward to her long walks with Ryan. He communicates well, provides pictures, and is on time. Thank you Ryan!"</p><div class="author">— Karen McDaris · Google Business</div></div>
-      <div class="card review-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Ryan took exceptional care of my diabetic dog, Badger, and I couldn't be happier with the experience. Caring for a diabetic dog requires attention to detail, consistency, and compassion, and Ryan exceeded my expectations in every way. He made sure Badger received his meals and insulin on schedule, kept me updated with messages and photos, and treated him like he was part of the family. It gave me complete peace of mind knowing Badger was in such capable and caring hands. I highly recommend Ryan to anyone looking for a trustworthy, dependable, and compassionate dog sitter—especially if your pet has special medical needs."</p><div class="author">— Bob Runion · Google Business</div></div>
+      <div class="card review-card reveal reveal-delay-<div class="stars">⭐⭐⭐⭐⭐</div><p>"My dog actually looks forward to his services. When I come home from vacation, my dog Vader is so happy. Thank you very much Ryan."</p><div class="author">— David Riposo · Google Business</div></div>
+      <div class="card review-card reveal reveal-delay-<div class="stars">⭐⭐⭐⭐⭐</div><p>"So grateful to have found someone local I can actually trust with my pets. Highly recommend Spare Human Services!"</p><div class="author">— Facebook Recommendation</div></div>
+      <div class="card review-card reveal reveal-delay-<div class="stars">⭐⭐⭐⭐⭐</div><p>"Ryan did a great job taking care of my puppers while I was out of town for a few days. He was always responsive and ready to answer any of my questions. I will be having him take care of my dogs anytime I need some assistance."</p><div class="author">— Eric P. · Rover · Nov 2023</div></div><div class="card review-card reveal reveal-delay-<div class="stars">⭐⭐⭐⭐⭐</div><p>"We have had great experience using Spare Human Services. Leia looks forward to her long walks with Ryan. He communicates well, provides pictures, and is on time. Thank you Ryan!"</p><div class="author">— Karen McDaris · Google Business</div></div>
+      <div class="card review-card reveal reveal-delay-<div class="stars">⭐⭐⭐⭐⭐</div><p>"Ryan took exceptional care of my diabetic dog, Badger, and I couldn't be happier with the experience. Caring for a diabetic dog requires attention to detail, consistency, and compassion, and Ryan exceeded my expectations in every way. He made sure Badger received his meals and insulin on schedule, kept me updated with messages and photos, and treated him like he was part of the family. It gave me complete peace of mind knowing Badger was in such capable and caring hands. I highly recommend Ryan to anyone looking for a trustworthy, dependable, and compassionate dog sitter—especially if your pet has special medical needs."</p><div class="author">— Bob Runion · Google Business</div></div>
     </div>
   </div>
 
@@ -614,7 +705,7 @@
   </div>
 </div>
 
-  <div class="section" id="faq" style="padding-top: 0;">
+  <div class="section reveal" id="faq" style="padding-top: 0;">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <p class="section-sub">Common questions from pet parents in Largo and Pinellas County.</p>
     <div class="grid faq-grid">
@@ -644,6 +735,7 @@
     <h2 class="section-title" style="text-align: center; font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 12px;">Serving Pinellas County Beach Communities</h2>
     <p style="text-align: center; font-size: 1.05rem; color: #8ba3c0; max-width: 600px; margin: 0 auto 40px; line-height: 1.6;">Licensed and insured pet care throughout Largo and the Pinellas County barrier islands. Click your community for local info and booking.</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto;">
+      <!-- Service area cards -->
       <a href="/clearwater-beach.html" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(94,234,212,0.12); border-radius: 16px; padding: 24px; text-align: center; transition: all 0.2s; display: block;">
         <div style="font-size: 1.1rem; font-weight: 700; color: #5eead4; margin-bottom: 4px;">Clearwater Beach</div>
         <div style="font-size: 0.85rem; color: #8ba3c0;">15 min from Largo</div>
@@ -777,6 +869,42 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function() {
       if (navLinks.classList.contains('open')) toggleMenu();
     });
+  });
+});
+</script>
+
+
+<script>
+// Nav scroll shadow
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('.nav-wrap');
+  if (nav) {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+
+// Scroll reveal animations
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  revealObserver.observe(el);
+});
+
+// Stagger card reveals within grids
+document.querySelectorAll('.grid, .reviews-grid, .faq-grid, .services-grid').forEach(function(grid) {
+  var cards = grid.querySelectorAll('.card, .flip-card');
+  cards.forEach(function(card, i) {
+    card.classList.add('reveal');
+    if (i < 4) card.classList.add('reveal-delay-' + (i + 1));
+    revealObserver.observe(card);
   });
 });
 </script>
