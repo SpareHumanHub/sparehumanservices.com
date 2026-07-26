@@ -412,14 +412,14 @@
     .blog-cta a { display: inline-block; background: rgba(94,234,212,0.1); border: 1px solid rgba(94,234,212,0.3); color: #5eead4; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 0.95rem; }
 
     @media (max-width: 768px) {
-      .hamburger { display: flex; }
+      html, body { overflow-x: hidden; } .hamburger { display: flex; }
       .nav-links {
-        position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+        position: fixed; top: 0; right: 0; transform: translateX(100%); width: 280px; height: 100vh;
         background: #0a1628; flex-direction: column; padding: 80px 24px 24px;
-        gap: 20px; transition: right 0.3s ease; z-index: 1000;
+        gap: 20px; transition: transform 0.3s ease; z-index: 1000;
         box-shadow: -4px 0 20px rgba(0,0,0,0.5); overflow-y: auto; display: flex !important;
       }
-      .nav-links.open { right: 0; }
+      .nav-links.open { transform: translateX(0); }
       .nav-links a { font-size: 1.05rem; padding: 8px 0; }
       .nav-links a:hover { color: #5eead4; }
       .nav-phone { font-size: 0.85rem; padding: 8px 16px; }
@@ -524,7 +524,7 @@
     .footer-links a:hover { color: #5eead4; transform: translateY(-1px); }
 
     /* Scroll behavior */
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body { scroll-behavior: smooth; }
 
     /* Responsive polish */
