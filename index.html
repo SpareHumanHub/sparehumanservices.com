@@ -327,7 +327,7 @@
     .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 920px; margin: 0 auto; }
 
     .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px 28px; transition: all 0.25s; }
-    .card:hover { background: rgba(94,234,212,0.06); border-color: rgba(94,234,212,0.2); transform: translateY(-4px); }
+    .card:not(.flip-front):not(.flip-back):hover { background: rgba(94,234,212,0.06); border-color: rgba(94,234,212,0.2); transform: translateY(-4px); }
     .card-icon { width: 52px; height: 52px; border-radius: 16px; background: rgba(94,234,212,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 18px; }
     .card h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
     .card p { font-size: 0.95rem; color: #8ba3c0; line-height: 1.6; margin-bottom: 12px; }
@@ -445,6 +445,14 @@
     .yt-channel-link a:hover { background: rgba(255,0,0,0.2); }
     @media (max-width: 640px) { .yt-card { flex: 0 0 240px; } }
   
+    
+    /* === FLIP CARD PROTECTION === */
+    .flip-front, .flip-back { transition: none !important; }
+    .flip-back { transform: rotateY(180deg) !important; }
+    .flip-card:hover .flip-front, .flip-card:hover .flip-back { transform: none !important; }
+    .flip-card:hover .flip-back { transform: rotateY(180deg) !important; }
+    .flip-card.flipped .flip-inner { transform: rotateY(180deg) !important; }
+
     /* === VISUAL POLISH (July 2026) === */
 
     /* Scroll reveal animations */
@@ -463,8 +471,8 @@
     .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #5eead4, transparent); border-radius: 2px; margin: 12px auto 0; }
 
     /* Enhanced card glow on hover */
-    .card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
-    .card:hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
+    .card:not(.flip-front):not(.flip-back) { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .card:not(.flip-front):not(.flip-back):hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
 
     /* Button polish */
     .hero-cta { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }

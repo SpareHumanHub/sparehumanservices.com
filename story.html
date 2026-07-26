@@ -110,8 +110,8 @@
     .nav-phone { transition: all 0.25s ease; }
     .nav-phone:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,234,212,0.25); }
 
-    .card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
-    .card:hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
+    .card:not(.flip-front):not(.flip-back) { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .card:not(.flip-front):not(.flip-back):hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
 
     .cta-btn { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
     .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(94,234,212,0.3); }
