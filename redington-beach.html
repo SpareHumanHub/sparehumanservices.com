@@ -99,6 +99,31 @@
     }
       .cta-card { padding: 32px 24px; }
     }
+  
+    /* === VISUAL POLISH (July 2026) === */
+    html { scroll-behavior: smooth; }
+    .nav-wrap { transition: box-shadow 0.3s ease, background 0.3s ease; }
+    .nav-wrap.scrolled { background: rgba(10,22,40,0.97); box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .nav-phone { transition: all 0.25s ease; }
+    .nav-phone:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,234,212,0.25); }
+
+    .svc-card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(94,234,212,0.1); border-color: rgba(94,234,212,0.3) !important; }
+    .highlight-card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .highlight-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(94,234,212,0.1); }
+    .hero h1 .teal { background: linear-gradient(135deg, #5eead4, #22d3ee, #5eead4); background-size: 200% auto; animation: shimmer 4s linear infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    @keyframes shimmer { to { background-position: 200% center; } }
+    .hero-badge { animation: badgePulse 3s ease-in-out infinite; }
+    @keyframes badgePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(94,234,212,0.3); } 50% { box-shadow: 0 0 0 8px rgba(94,234,212,0); } }
+    .cta-btn { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(94,234,212,0.3); }
+
   </style>
   <script type="application/ld+json">
   {
@@ -174,15 +199,15 @@
     <p>Professional, licensed, and insured pet care serving Redington Beach and nearby communities in Pinellas County — your local pet sitter near me for the barrier islands. GPS-tracked walks, photo updates, and reliable scheduling — whether you're a year-round resident or visiting for the season.</p>
   </div>
 
-  <div class="content">
+  <div class="content reveal">
       <p>Redington Beach and Redington Shores are two small, quiet residential communities tucked between Indian Rocks Beach and Madeira Beach on the Pinellas County barrier islands. With a combined population of under 2,000, these are the kinds of neighborhoods where people know each other — and their dogs. Spare Human Services provides licensed, insured pet care to these communities from our base just 12 minutes away in Largo.</p>
       <p>The residents here tend to be year-round or long-term seasonal, and they value consistency. That means the same dog walker showing up at the same time, the same calm handling their pet knows and trusts, and the same photo updates after every visit. For a small community like Redington Beach, that personal reliability matters more than anything else.</p>
       <p>Whether you need a daily morning walk before work, a midday drop-in for your cat, or overnight care during a trip, I offer the full range of Spare Human Services — same pricing, same professionalism, same GPS-tracked walks — right here in Redington Beach and Redington Shores.</p>
 
   </div>
 
-  <div class="highlights">
-    <div class="highlight-card">
+  <div class="highlights reveal">
+    <div class="highlight-card reveal">
       <h3>Pet-Friendly Spots in Redington Beach</h3>
       <ul>
           <li>Redington Beach access paths — multiple public beach access points along Gulf Boulevard for quiet, uncrowded walks</li>
@@ -192,7 +217,7 @@
 
       </ul>
     </div>
-    <div class="highlight-card">
+    <div class="highlight-card reveal reveal-delay-1">
       <h3>Local Landmarks & Community</h3>
       <ul>
           <li>Redington Beach — small residential beach community with a quiet, local feel</li>
@@ -204,25 +229,25 @@
     </div>
   </div>
 
-  <div class="services">
+  <div class="services reveal">
     <h2>Services Available in Redington Beach</h2>
     <div class="svc-grid">
-        <div class="svc-card">
+        <div class="svc-card reveal reveal-delay-1">
           <div class="svc-name">Dog Walking</div>
           <div class="svc-price">30 min $18 · 60 min $33 · +$5/additional dog</div>
           <div class="svc-desc">Daily walks with GPS tracking and photo updates.</div>
         </div>
-        <div class="svc-card">
+        <div class="svc-card reveal reveal-delay-2">
           <div class="svc-name">Drop-In Visits</div>
           <div class="svc-price">15 min $16 · 30 min $24</div>
           <div class="svc-desc">Quick check-ins for feeding, potty breaks, and playtime.</div>
         </div>
-        <div class="svc-card">
+        <div class="svc-card reveal reveal-delay-3">
           <div class="svc-name">In-Home Pet Sitting</div>
           <div class="svc-price">$20/hr · $18/hr for 4+ hour bundles</div>
           <div class="svc-desc">Extended care while you're at work or away for the day.</div>
         </div>
-        <div class="svc-card">
+        <div class="svc-card reveal reveal-delay-4">
           <div class="svc-name">Overnight Care</div>
           <div class="svc-price">$100 flat · 10pm–6am</div>
           <div class="svc-desc">Your pet stays comfortable at home overnight.</div>
@@ -300,6 +325,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+</script>
+
+
+<script>
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('.nav-wrap');
+  if (nav) {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 </script>
 
 </body>

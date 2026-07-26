@@ -92,6 +92,27 @@
     .footer-links a:hover { color: #5eead4; }
     footer p { font-size: 0.85rem; color: #6b829e; }
     footer p a { color: #8ba3c0; }
+  
+    /* === VISUAL POLISH (July 2026) === */
+    html { scroll-behavior: smooth; }
+    .nav-wrap { transition: box-shadow 0.3s ease, background 0.3s ease; }
+    .nav-wrap.scrolled { background: rgba(10,22,40,0.97); box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .nav-phone { transition: all 0.25s ease; }
+    .nav-phone:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,234,212,0.25); }
+
+    .card { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .card:hover { background: rgba(94,234,212,0.08); border-color: rgba(94,234,212,0.3); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(94,234,212,0.08), 0 2px 8px rgba(0,0,0,0.2); }
+
+    .cta-btn { transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(94,234,212,0.3); }
+    .cta { transition: all 0.3s ease; }
+
   </style>
   <script type="application/ld+json">
   {
@@ -257,6 +278,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+</script>
+
+
+<script>
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('.nav-wrap');
+  if (nav) {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 </script>
 
 </body>
