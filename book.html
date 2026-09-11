@@ -300,5 +300,7 @@ var revealObserver = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 </script>
 
+  <script src="/js/ga4-events.js" defer></script>
+<script>if(window.gtag){gtag('event','begin_booking',{event_category:'conversion',event_label:location.pathname});}</script>
 </body>
 </html>

@@ -367,6 +367,7 @@
         const result = await res.json();
 
         if (result.success) {
+          if (window.gtag) { window.gtag('event', 'generate_lead', { event_category: 'conversion', event_label: 'intake_form', value: 1 }); }
           msgEl.className = 'form-msg success';
           msgEl.innerHTML = '✅ ' + result.message + ' Ryan will review your info and reach out soon.';
           form.style.display = 'none';
@@ -430,5 +431,6 @@ var revealObserver = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 </script>
 
+  <script src="/js/ga4-events.js" defer></script>
 </body>
 </html>
